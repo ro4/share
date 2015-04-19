@@ -27,19 +27,15 @@ class PublishController extends BaseController
             $this->error('一定是你的打开方式不对');
         }
         $model = new PublishForm();
-        $data_file = $_POST['PublishForm']['data'];
-       	$file = CUploadedFile::getInstanceByName($data_file);
-       	var_dump($_FILES['tem']);exit;
+       	$file = CUploadedFile::getInstance($model,'data');
        	if(is_object($file) && get_class($file)){
        	   	$extensionName=$file->getExtensionName();
        	}
        	$dir = 'public/upload/data';
-       	$dirName = $dir.'/'.$data_file;
-       	if(!$file->saveAs($avatarName)){
+       	$fileName = $dir.'/'.$file->getName();
+       	if(!$file->saveAs($fileName)){
 				$this->error('头像上传失败');
 		}
-		exit;
-
         //使用事物处理插入
        $transaction=Yii::app()->db->beginTransaction();
        try {
@@ -49,13 +45,14 @@ class PublishController extends BaseController
 	       $data->add_time=time();
 	       $data->update_time=time();
 	       $data->published_uid=Yii::app()->user->id;
+	       $data->data_url = $fileName;
 	       $data->ip=Yii::app()->request->userHostAddress;
 	       //插入
 	       if(!$data->save()){
 	       		throw new ErrorException("添加失败");
 	       }
 	       //获取返回的question_id
-	       $question_id=$question->primaryKey;
+	       $data_id=$data->primaryKey;
 	       if(isset($_POST['topic'])){
 		       //处理话题 判断话题是否已经存在数据库中 如果存在则返回id  否则重新插入获取id  并插入topic_question中
 		       $topics=$_POST['topic'];
@@ -85,13 +82,13 @@ class PublishController extends BaseController
 		       		}
 		       		
 		       		//插入 topic_question 中
-		       		if(!$this->insertTopicQuestion($topic_id, $question_id)){
+		       		if(!$this->insertTopicQuestion($topic_id, $data_id)){
 		       			throw new ErrorException("添加失败");
 		       		}
 		       }
 	       }
 	       $transaction->commit();
-	       $this->success('添加成功',$this->createUrl('question/index',array('id'=>$question_id)));
+	       $this->success('添加成功',$this->createUrl('data/index',array('id'=>$data_id)));
        }catch(Exception $e){
 	       $transaction->rollBack();
 // 	       exit($e->getMessage());

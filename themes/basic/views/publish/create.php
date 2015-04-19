@@ -12,7 +12,7 @@
 			$form=$this->beginWidget('CActiveForm',array(
 				'action'=>$this->createUrl('publish/checkcreate'),
 				'id'=>'create-form',
-				'enctype'=>'multipart/form-data',
+				'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 				'enableClientValidation'=>true,
 				'enableAjaxValidation'=>true,
 				'clientOptions'=>array(
