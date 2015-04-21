@@ -1,26 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "{{answer}}".
+ * This is the model class for table "{{comment}}".
  *
- * The followings are the available columns in table '{{answer}}':
+ * The followings are the available columns in table '{{comment}}':
  * @property string $id
- * @property string $question_id
- * @property string $answer_content
+ * @property string $data_id
+ * @property string $content
  * @property string $add_time
  * @property string $against_count
  * @property string $agree_count
  * @property string $uid
  * @property string $comment_count
- * @property integer $has_attach
  * @property string $ip
  */
-class Answer extends CActiveRecord
+class Comment extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Answer the static model class
+	 * @return Comment the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -32,7 +31,7 @@ class Answer extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{answer}}';
+		return '{{comment}}';
 	}
 
 	/**
@@ -43,14 +42,13 @@ class Answer extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('question_id, answer_content,uid,add_time,ip', 'required'),
-			array('has_attach', 'numerical', 'integerOnly'=>true),
-			array('question_id', 'length', 'max'=>11),
+			array('data_id, content,uid,add_time,ip', 'required'),
+			array('data_id', 'length', 'max'=>11),
 			array('add_time, against_count, agree_count, uid, comment_count', 'length', 'max'=>10),
 			array('ip', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, question_id, answer_content, add_time, against_count, agree_count, uid, comment_count, has_attach, ip', 'safe', 'on'=>'search'),
+			array('id, data_id, content, add_time, against_count, agree_count, uid, comment_count, ip', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,14 +70,13 @@ class Answer extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'question_id' => 'Question',
-			'answer_content' => 'Answer Content',
+			'data_id' => 'Data',
+			'content' => 'Content',
 			'add_time' => 'Add Time',
 			'against_count' => 'Against Count',
 			'agree_count' => 'Agree Count',
 			'uid' => 'Uid',
 			'comment_count' => 'Comment Count',
-			'has_attach' => 'Has Attach',
 			'ip' => 'Ip',
 		);
 	}
@@ -96,14 +93,13 @@ class Answer extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('question_id',$this->question_id,true);
-		$criteria->compare('answer_content',$this->answer_content,true);
+		$criteria->compare('data_id',$this->data_id,true);
+		$criteria->compare('content',$this->content,true);
 		$criteria->compare('add_time',$this->add_time,true);
 		$criteria->compare('against_count',$this->against_count,true);
 		$criteria->compare('agree_count',$this->agree_count,true);
 		$criteria->compare('uid',$this->uid,true);
 		$criteria->compare('comment_count',$this->comment_count,true);
-		$criteria->compare('has_attach',$this->has_attach);
 		$criteria->compare('ip',$this->ip,true);
 
 		return new CActiveDataProvider($this, array(

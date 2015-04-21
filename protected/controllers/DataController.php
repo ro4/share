@@ -37,7 +37,7 @@ class DataController extends Controller {
 		//获取问题评论  并返回model
 		//$data_comment_models=$this->getDataComment($id);
 		
-		//获取答案相关信息
+		//获取评论相关信息
 		$sql="select `{{comment}}`.`id`,`{{comment}}`.`content`,`{{comment}}`.`add_time`,`{{comment}}`.`against_count`,`{{comment}}`.`agree_count`,`{{comment}}`.`comment_count`
 				,`{{comment}}`.`ip`,`{{users}}`.`uid`,`{{users}}`.`username`,`{{users}}`.`avatar_file`
 				from `{{comment}}`
@@ -69,14 +69,15 @@ class DataController extends Controller {
 		//			'question_comment_models'=>$question_comment_models,
 		//	));
 		//}else if($question_model['lock']){
-		if($question_model['state']){
+		//var_dump($comment_models);exit;
+		if($data_model['state']){
 			//问题已经被锁定
 			$this->render('index_lock',array(
 					'data_model'=>$data_model,
 					'comment_models'=>$comment_models,
 			));
 
-		}else{
+		}else{	
 			$this->render('index',array(
 					'data_model'=>$data_model,
 					'comment_models'=>$comment_models,

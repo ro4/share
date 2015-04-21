@@ -1,16 +1,16 @@
 <?php
 
 /**
- * This is the model class for table "{{topic_question}}".
+ * This is the model class for table "{{topic_data}}".
  *
- * The followings are the available columns in table '{{topic_question}}':
+ * The followings are the available columns in table '{{topic_data}}':
  * @property string $id
  * @property string $topic_id
- * @property string $question_id
+ * @property string $data_id
  * @property string $add_time
  * @property string $uid
  */
-class TopicQuestion extends CActiveRecord
+class TopicData extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
@@ -27,7 +27,7 @@ class TopicQuestion extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{topic_question}}';
+		return '{{topic_data}}';
 	}
 
 	/**
@@ -38,12 +38,12 @@ class TopicQuestion extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('topic_id, question_id, add_time, uid', 'required'),
-			array('topic_id, question_id, uid', 'length', 'max'=>11),
+			array('topic_id, data_id, add_time, uid', 'required'),
+			array('topic_id, data_id, uid', 'length', 'max'=>11),
 			array('add_time', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, topic_id, question_id, add_time, uid', 'safe', 'on'=>'search'),
+			array('id, topic_id, data_id, add_time, uid', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,7 +66,7 @@ class TopicQuestion extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'topic_id' => 'Topic',
-			'question_id' => 'Question',
+			'data_id' => 'Data',
 			'add_time' => 'Add Time',
 			'uid' => 'Uid',
 		);
@@ -85,7 +85,7 @@ class TopicQuestion extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('topic_id',$this->topic_id,true);
-		$criteria->compare('question_id',$this->question_id,true);
+		$criteria->compare('data_id',$this->data_id,true);
 		$criteria->compare('add_time',$this->add_time,true);
 		$criteria->compare('uid',$this->uid,true);
 

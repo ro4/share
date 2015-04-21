@@ -82,7 +82,7 @@ class PublishController extends BaseController
 		       		}
 		       		
 		       		//插入 topic_question 中
-		       		if(!$this->insertTopicQuestion($topic_id, $data_id)){
+		       		if(!$this->insertTopicData($topic_id, $data_id)){
 		       			throw new ErrorException("添加失败");
 		       		}
 		       }
@@ -117,10 +117,10 @@ class PublishController extends BaseController
 	/**
 	 * 插入topic_question表中
 	 */
-	private function insertTopicQuestion($topic_id,$question_id){
-		$tq_model=new TopicQuestion();
+	private function insertTopicData($topic_id,$data_id){
+		$tq_model=new TopicData();
 		$tq_model->topic_id=$topic_id;
-		$tq_model->question_id=$question_id;
+		$tq_model->data_id=$data_id;
 		$tq_model->add_time=time();
 		$tq_model->uid=Yii::app()->user->id;
 		if($tq_model->save()){

@@ -33,7 +33,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
                 <!-- share内容主体 -->
                 <div class="ask_main pull-left span7">
                 	<h5 id="ask_title">
-                    	<a href="<?php echo $this->createUrl('question/index',array('id'=>$model['data_id']));?>">
+                    	<a href="<?php echo $this->createUrl('data/index',array('id'=>$model['data_id']));?>">
                         	<?php echo $model['data_title'];?> 
                         </a>
                         &nbsp;
