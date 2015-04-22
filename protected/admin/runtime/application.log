@@ -1829,3 +1829,496 @@ Stack trace:
 REQUEST_URI=/backend.php?r=user/delete&uid=9
 HTTP_REFERER=http://ask/backend.php?r=user/index
 ---
+2015/04/22 17:41:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:41:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:38 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/04/22 17:42:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---

@@ -43,9 +43,9 @@
 				));
 
 				break;
-			case 'answer':
-				$this->renderPartial('//user/_answer',array(
-					'answer_models'=>$models,
+			case 'comment':
+				$this->renderPartial('//user/_comment',array(
+					'comment_models'=>$models,
 					'pages'=>$pages,
 					'count'=>$count,
 				));

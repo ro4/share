@@ -146,8 +146,8 @@ class DataController extends Controller {
 			$this->error('非法请求');
 		}
 		$id=$_POST['id'];
-		//首先查找问题是否存在
-		if(QuestionFocus::model()->exists('uid=:uid AND question_id=:question_id',array(':uid'=>Yii::app()->user->id,':question_id'=>$id))){
+		//首先是否存在
+		if(DataFocus::model()->exists('uid=:uid AND data_id=:data_id',array(':uid'=>Yii::app()->user->id,':data_id'=>$id))){
 			$is_focus=true;
 		}else {
 			$is_focus=false;
@@ -157,11 +157,11 @@ class DataController extends Controller {
 			$transaction=Yii::app()->db->beginTransaction();
 			try {
 				//执行插入
-				$qf_model=new QuestionFocus();
-				$qf_model->question_id=$id;
-				$qf_model->uid=Yii::app()->user->id;
-				$qf_model->add_time=time();
-				if(!$qf_model->save()){
+				$df_model=new DataFocus();
+				$df_model->data_id=$id;
+				$df_model->uid=Yii::app()->user->id;
+				$df_model->add_time=time();
+				if(!$df_model->save()){
 					throw new ErrorException('关注失败');
 				}
 				$this->incFocusCount($id);
@@ -178,7 +178,7 @@ class DataController extends Controller {
 			$transaction=Yii::app()->db->beginTransaction();
 			try {
 				//执行取消插入
-				if(!QuestionFocus::model()->deleteAll('question_id=:question_id AND uid=:uid',array(':question_id'=>$id,':uid'=>Yii::app()->user->id))){
+				if(!DataFocus::model()->deleteAll('data_id=:data_id AND uid=:uid',array(':data_id'=>$id,':uid'=>Yii::app()->user->id))){
 					throw new Exception('取消关注失败');
 				}
 				$this->DecFocusCount($id);
@@ -194,17 +194,6 @@ class DataController extends Controller {
 		}
 		
 		echo json_encode($data);
-	}
-
-	/*
-	 *
-	 *设置为最佳答案
-	 *
-	 */
-	public function actionSetBest($question_id,$answer_id){
-		if(Question::model()->updateByPk($question_id,array('best_answer'=>$answer_id))){
-			$this->redirect(Yii::app()->request->urlReferrer);
-		}
 	}	
 }
 

@@ -65,7 +65,6 @@ class AccountController extends BaseController{
 		//头像更新
 		//更新头像
 		$image=Help::uploadAvatar(Yii::app()->user->id,'avatar');
-		var_dump($image);exit;
 		if($image){
 			$data['avatar_file']=$image;
 			//更新头像session

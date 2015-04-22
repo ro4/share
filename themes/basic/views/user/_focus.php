@@ -11,39 +11,17 @@
 				<ul style="list-style-type:square">
 				<?php foreach($focus_models as $focus_model): ?>
 				<li>
-					<a href="<?php echo $this->createUrl('question/index',array('id'=>$focus_model['id'])) ?>" target="_blank">
-						<?php echo $focus_model['question_content'] ?> 
+					<a href="<?php echo $this->createUrl('data/index',array('id'=>$focus_model['id'])) ?>" target="_blank">
+						<?php echo $focus_model['data_title'] ?> 
 					</a>
 					<br/>
 					<div class="muted info">
-						回答数:
-							<?php echo $focus_model['answer_count'] ?> 
+						下载数:
+							<?php echo $focus_model['download_count'] ?> 
 						&nbsp;&nbsp;&nbsp;浏览数:
 							<?php echo $focus_model['view_count'] ?> 
 						&nbsp;&nbsp;&nbsp;提问时间:
 						<?php echo date('Y-m-d',$focus_model['add_time']); ?> 
-						&nbsp;&nbsp;&nbsp;状态: 
-						<?php 
-							if($focus_model['lock']=='1'):
-						 ?>
-						<span class="text-error">
-							已锁定
-						</span>	
-						<?php 
-							elseif($focus_model['best_answer']):
-						 ?>
-						<span class="text-success">
-							已解决
-						</span>	
-						<?php 
-							else:
-						 ?>
-						<span class="text-info">
-							未解决
-						</span>
-						<?php 
-							endif;
-						 ?>	
 					</div>
 				</li>
 				<?php endforeach; ?>

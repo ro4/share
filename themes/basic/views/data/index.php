@@ -9,9 +9,9 @@
 				<?php 
 					if($data_model['is_focus']):
 				?>	
-					<a href="javascript:q_focus(<?php echo $data_model['id']?>);" class="btn  btn-info btn-mini pull-right btn-inverse" id="focus_btn">取消关注</a>
+					<a href="javascript:d_focus(<?php echo $data_model['id']?>);" class="btn  btn-info btn-mini pull-right btn-inverse" id="focus_btn">取消关注</a>
 				<?php else:?>
-					<a href="javascript:q_focus(<?php echo $data_model['id']?>);" class="btn btn-info btn-mini pull-right" id="focus_btn">关注</a>
+					<a href="javascript:d_focus(<?php echo $data_model['id']?>);" class="btn btn-info btn-mini pull-right" id="focus_btn">关注</a>
 				<?php endif;?>
 			<?php endif;?>
 		</h4>
@@ -117,9 +117,9 @@
 	</div>
 </div>	
 <script type="text/javascript">
-	function q_focus(id){
+	function d_focus(id){
 		//ajax 提交
-		$.post('<?php echo $this->createUrl('question/dofocus');?>',{"id":id,"YII_CSRF_TOKEN":"<?php echo Yii::app()->request->csrfToken;?>"},function(data){
+		$.post('<?php echo $this->createUrl('data/dofocus');?>',{"id":id,"YII_CSRF_TOKEN":"<?php echo Yii::app()->request->csrfToken;?>"},function(data){
 			//解析json
 			var data=eval("("+data+")");
 			if(data.status){

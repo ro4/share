@@ -15,15 +15,15 @@ class UserController extends BaseController {
 		//获取ype
 		if(isset($_GET['type']) && $_GET['type']=='focus'){
 			//获取关注的问题
-			$sql="select `{{question}}`.`id`,`{{question}}`.`question_content`,`{{question}}`.`add_time`,`{{question}}`.`published_uid`,`{{question}}`.`lock`,`{{question}}`.`best_answer`,`{{question}}`.`answer_count`,`{{question}}`.`view_count` from `{{question}}` left join `{{question_focus}}` on (`{{question_focus}}`.`question_id`=`{{question}}`.`id`) where `{{question_focus}}`.`uid`=$uid order by `{{question_focus}}`.`add_time` desc";
+			$sql="select `{{data}}`.`id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`published_uid`,`{{data}}`.`state`,`{{data}}`.`download_count`,`{{data}}`.`view_count` from `{{data}}` left join `{{data_focus}}` on (`{{data_focus}}`.`data_id`=`{{data}}`.`id`) where `{{data_focus}}`.`uid`=$uid order by `{{data_focus}}`.`add_time` desc";
 
-		}elseif(isset($_GET['type']) && $_GET['type']=='answer'){
+		}elseif(isset($_GET['type']) && $_GET['type']=='comment'){
 			//获取回复的问题
-			$sql="select `{{question}}`.`id`,`{{question}}`.`question_content`,`{{question}}`.`add_time`,`{{question}}`.`published_uid`,`{{question}}`.`lock`,`{{question}}`.`best_answer`,`{{question}}`.`answer_count`,`{{question}}`.`view_count` from `{{question}}` left join `{{answer}}` on (`{{answer}}`.`question_id`=`{{question}}`.`id`) where `{{answer}}`.`uid`=$uid";
+			$sql="select `{{data}}`.`id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`published_uid`,`{{data}}`.`state`,`{{data}}`.`download_count`,`{{data}}`.`view_count` from `{{data}}` left join `{{comment}}` on (`{{comment}}`.`data_id`=`{{data}}`.`id`) where `{{comment}}`.`uid`=$uid";
 
 		}else{
 			//获取自己发布的问题
-			$sql="select `{{question}}`.`id`,`{{question}}`.`question_content`,`{{question}}`.`add_time`,`{{question}}`.`published_uid`,`{{question}}`.`lock`,`{{question}}`.`best_answer`,`{{question}}`.`answer_count`,`{{question}}`.`view_count` from `{{question}}` where `{{question}}`.`published_uid`=$uid order by `{{question}}`.`add_time` desc";
+			$sql="select `{{data}}`.`id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`published_uid`,`{{data}}`.`state`,`{{data}}`.`download_count`,`{{data}}`.`view_count` from `{{data}}` where `{{data}}`.`published_uid`=$uid order by `{{data}}`.`add_time` desc";
 		}
 
 		$connection=Yii::app()->db;
@@ -36,8 +36,7 @@ class UserController extends BaseController {
 		$models=$connection->createCommand($sql." LIMIT :offset,:limit");
 		$models->bindValue(':offset', $pages->currentPage*$pages->pageSize);
 		$models->bindValue(':limit', $pages->pageSize);
-		$models=$models->queryAll();
-
+		$models=$models->queryAll();	
 		$this->render('index',array(
 				'user_model'=>$user_model,
 				'models'=>$models,
