@@ -13,24 +13,24 @@ class SearchController extends Controller{
 		}
 		
 		//搜索内容
-		$sql="select `id`,`question_content`,`lock`,`best_answer`,`view_count`,`answer_count` from {{question}} where `question_content` like '%{$word}%'";
-		$question_models=Yii::app()->db->createCommand($sql)->queryAll();
+		$sql="select `id`,`data_title`,`download_count`,`view_count` from {{data}} where `data_title` like '%{$word}%'";
+		$data_models=Yii::app()->db->createCommand($sql)->queryAll();
 		$connection=Yii::app()->db;
 		$criteria = new CDbCriteria;
-		$count=count($question_models);
+		$count=count($data_models);
 		$pages = new CPagination($count);
 		$pages->pageSize = 10;
 		$pages->applylimit($criteria);
-		$question_models=$connection->createCommand($sql." LIMIT :offset,:limit");
-		$question_models->bindValue(':offset', $pages->currentPage*$pages->pageSize);
-		$question_models->bindValue(':limit', $pages->pageSize);
-		$question_models=$question_models->queryAll();
+		$data_models=$connection->createCommand($sql." LIMIT :offset,:limit");
+		$data_models->bindValue(':offset', $pages->currentPage*$pages->pageSize);
+		$data_models->bindValue(':limit', $pages->pageSize);
+		$data_models=$data_models->queryAll();
 		
 
 		
 		$this->render('index',array(
 			'count'=>$count,
-			'question_models'=>$question_models,
+			'data_models'=>$data_models,
 			'pages'=>$pages,
 			'word'=>$word,				
 		));

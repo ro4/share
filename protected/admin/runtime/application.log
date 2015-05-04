@@ -2322,3 +2322,1009 @@ Stack trace:
 REQUEST_URI=/backend.php?r=public/checklogin
 HTTP_REFERER=http://s.me/backend.php?r=public/login
 ---
+2015/05/04 12:17:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 12:22:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 12:22:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 12:22:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 12:22:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 12:22:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 12:22:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 12:23:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 12:24:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:29:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:29:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:29:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:29:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:29:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:29:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:29:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:29:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:37:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:37:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:37:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:37:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\code\share\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\code\share\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\code\share\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\code\share\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\code\share\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\code\share\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\code\share\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#7 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#8 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#9 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#10 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#11 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#12 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#13 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#14 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#15 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#16 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#20 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#21 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 D:\code\share\backend.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:40:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ask.share_admin' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_admin`.
+in D:\code\share\protected\admin\models\Admin.php (24)
+in D:\code\share\protected\admin\components\UserIdentity.php (13)
+in D:\code\share\protected\admin\models\LoginForm.php (50)
+2015/05/04 14:40:17 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Admin" 对应的 table "{{admin}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#1 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#2 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#3 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#4 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#8 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:40:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ask.share_admin' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_admin`.
+in D:\code\share\protected\admin\models\Admin.php (24)
+in D:\code\share\protected\admin\components\UserIdentity.php (13)
+in D:\code\share\protected\admin\models\LoginForm.php (50)
+2015/05/04 14:40:23 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Admin" 对应的 table "{{admin}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#1 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#2 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#3 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#4 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#8 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:40:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ask.share_admin' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_admin`.
+in D:\code\share\protected\admin\models\Admin.php (24)
+in D:\code\share\protected\admin\components\UserIdentity.php (13)
+in D:\code\share\protected\admin\models\LoginForm.php (50)
+2015/05/04 14:40:23 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Admin" 对应的 table "{{admin}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Admin))
+#1 D:\code\share\protected\admin\models\Admin.php(24): CActiveRecord::model('Admin')
+#2 D:\code\share\protected\admin\components\UserIdentity.php(13): Admin::model()
+#3 D:\code\share\protected\admin\models\LoginForm.php(50): UserIdentity->authenticate()
+#4 D:\code\share\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#5 D:\code\share\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 D:\code\share\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#7 D:\code\share\framework\web\widgets\CActiveForm.php(835): CModel->validate(NULL)
+#8 D:\code\share\protected\admin\controllers\PublicController.php(27): CActiveForm::validate(Object(LoginForm))
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): PublicController->actionCheckLogin()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checklogin')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('public/checklog...')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=public/checklogin
+HTTP_REFERER=http://s.me/backend.php?r=public/login
+---
+2015/05/04 14:51:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`lock`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`ip`,`share_users`.`username`,`share_users`.`uid`
+				from `share_question`				
+				left join `share_users` on (`share_users`.`uid` = `share_question`.`published_uid`) order by `share_question`.`add_time` desc .
+in D:\code\share\protected\admin\controllers\QuestionController.php (37)
+in D:\code\share\backend.php (13)
+2015/05/04 14:51:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`lock`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`ip`,`share_users`.`username`,`share_users`.`uid`
+				from `share_question`				
+				left join `share_users` on (`share_users`.`uid` = `share_question`.`published_uid`) order by `share_question`.`add_time` desc ' in D:\code\share\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\code\share\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\code\share\protected\admin\controllers\QuestionController.php(37): CDbCommand->queryAll()
+#2 D:\code\share\framework\web\actions\CInlineAction.php(49): QuestionController->actionIndex()
+#3 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#7 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('question/index')
+#8 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\code\share\backend.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/backend.php?r=question/index
+HTTP_REFERER=http://s.me/backend.php?r=site/index
+---
+2015/05/04 14:51:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\UserController.php (144)
+in D:\code\share\protected\admin\views\user\index.php (54)
+2015/05/04 14:51:56 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Question" 对应的 table "{{question}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Question))
+#1 D:\code\share\protected\models\Question.php(31): CActiveRecord::model('Question')
+#2 D:\code\share\protected\admin\controllers\UserController.php(144): Question::model()
+#3 D:\code\share\protected\admin\views\user\index.php(54): UserController->getQuestionCount('1')
+#4 D:\code\share\framework\web\CBaseController.php(126): require('D:\\code\\share\\p...')
+#5 D:\code\share\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\code\\share\\p...', Array, true)
+#6 D:\code\share\framework\web\CController.php(869): CBaseController->renderFile('D:\\code\\share\\p...', Array, true)
+#7 D:\code\share\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 D:\code\share\protected\admin\controllers\UserController.php(35): CController->render('index', Array)
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=user/index
+HTTP_REFERER=http://s.me/backend.php?r=site/index
+---
+2015/05/04 15:58:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`lock`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`ip`,`share_users`.`username`,`share_users`.`uid`
+				from `share_question`				
+				left join `share_users` on (`share_users`.`uid` = `share_question`.`published_uid`) order by `share_question`.`add_time` desc .
+in D:\code\share\protected\admin\controllers\QuestionController.php (37)
+in D:\code\share\backend.php (13)
+2015/05/04 15:58:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`lock`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`ip`,`share_users`.`username`,`share_users`.`uid`
+				from `share_question`				
+				left join `share_users` on (`share_users`.`uid` = `share_question`.`published_uid`) order by `share_question`.`add_time` desc ' in D:\code\share\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\code\share\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\code\share\protected\admin\controllers\QuestionController.php(37): CDbCommand->queryAll()
+#2 D:\code\share\framework\web\actions\CInlineAction.php(49): QuestionController->actionIndex()
+#3 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#7 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('question/index')
+#8 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\code\share\backend.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/backend.php?r=question/index
+HTTP_REFERER=http://s.me/backend.php?r=site/index
+---
+2015/05/04 16:02:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'share_question.add_time' in 'order clause'. The SQL statement executed was: select `share_data`.`id`,`share_data`.`data_title`,`share_data`.`add_time`,`share_data`.`update_time`,`share_data`.`download_count`,`share_data`.`view_count`,`share_data`.`focus_count`,`share_data`.`comment_count`,`share_data`.`ip`,`share_users`.`username`,`share_users`.`uid`
+				from `share_data`				
+				left join `share_users` on (`share_users`.`uid` = `share_data`.`published_uid`) order by `share_question`.`add_time` desc .
+in D:\code\share\protected\admin\controllers\QuestionController.php (33)
+in D:\code\share\backend.php (13)
+2015/05/04 16:02:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'share_question.add_time' in 'order clause'. The SQL statement executed was: select `share_data`.`id`,`share_data`.`data_title`,`share_data`.`add_time`,`share_data`.`update_time`,`share_data`.`download_count`,`share_data`.`view_count`,`share_data`.`focus_count`,`share_data`.`comment_count`,`share_data`.`ip`,`share_users`.`username`,`share_users`.`uid`
+				from `share_data`				
+				left join `share_users` on (`share_users`.`uid` = `share_data`.`published_uid`) order by `share_question`.`add_time` desc ' in D:\code\share\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\code\share\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 D:\code\share\protected\admin\controllers\QuestionController.php(33): CDbCommand->queryAll()
+#2 D:\code\share\framework\web\actions\CInlineAction.php(49): QuestionController->actionIndex()
+#3 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#7 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('question/index')
+#8 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 D:\code\share\backend.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/backend.php?r=question/index
+HTTP_REFERER=http://s.me/backend.php?r=site/index
+---
+2015/05/04 16:07:26 [error] [php] Undefined variable: status (D:\code\share\protected\admin\views\question\index.php:33)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(869): QuestionController->renderFile()
+#1 D:\code\share\framework\web\CController.php(782): QuestionController->renderPartial()
+#2 D:\code\share\protected\admin\controllers\QuestionController.php(46): QuestionController->render()
+#3 D:\code\share\framework\web\actions\CInlineAction.php(49): QuestionController->actionIndex()
+#4 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\code\share\framework\web\CController.php(286): QuestionController->runAction()
+#6 D:\code\share\framework\web\CController.php(265): QuestionController->runActionWithFilters()
+#7 D:\code\share\framework\web\CWebApplication.php(282): QuestionController->run()
+#8 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=question/index
+in D:\code\share\protected\admin\views\question\index.php (33)
+in D:\code\share\protected\admin\controllers\QuestionController.php (46)
+in D:\code\share\backend.php (13)
+2015/05/04 16:08:21 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`question_detail`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`published_uid`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`lock`,`share_question`.`ip`,`share_users`.`username` from `share_question` left join `share_users` on (`share_users`.`uid`=`share_question`.`published_uid`) where `share_question`.`id`=:id.
+in D:\code\share\protected\admin\controllers\QuestionController.php (57)
+in D:\code\share\backend.php (13)
+2015/05/04 16:08:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`question_detail`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`published_uid`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`lock`,`share_question`.`ip`,`share_users`.`username` from `share_question` left join `share_users` on (`share_users`.`uid`=`share_question`.`published_uid`) where `share_question`.`id`=:id' in D:\code\share\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\code\share\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\code\share\protected\admin\controllers\QuestionController.php(57): CDbCommand->queryRow(true, Array)
+#2 [internal function]: QuestionController->actionUpdate('11')
+#3 D:\code\share\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#4 D:\code\share\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionController), Object(ReflectionMethod), Array)
+#5 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\code\share\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('question/update')
+#10 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\code\share\backend.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/backend.php?r=question/update&id=11
+HTTP_REFERER=http://s.me/backend.php?r=question/index&uid=1
+---
+2015/05/04 16:09:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\UserController.php (144)
+in D:\code\share\protected\admin\views\user\index.php (54)
+2015/05/04 16:09:50 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Question" 对应的 table "{{question}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Question))
+#1 D:\code\share\protected\models\Question.php(31): CActiveRecord::model('Question')
+#2 D:\code\share\protected\admin\controllers\UserController.php(144): Question::model()
+#3 D:\code\share\protected\admin\views\user\index.php(54): UserController->getQuestionCount('1')
+#4 D:\code\share\framework\web\CBaseController.php(126): require('D:\\code\\share\\p...')
+#5 D:\code\share\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\code\\share\\p...', Array, true)
+#6 D:\code\share\framework\web\CController.php(869): CBaseController->renderFile('D:\\code\\share\\p...', Array, true)
+#7 D:\code\share\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 D:\code\share\protected\admin\controllers\UserController.php(35): CController->render('index', Array)
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=user/index&uid=2
+HTTP_REFERER=http://s.me/backend.php?r=question/index
+---
+2015/05/04 16:10:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\UserController.php (144)
+in D:\code\share\protected\admin\views\user\index.php (54)
+2015/05/04 16:10:01 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Question" 对应的 table "{{question}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Question))
+#1 D:\code\share\protected\models\Question.php(31): CActiveRecord::model('Question')
+#2 D:\code\share\protected\admin\controllers\UserController.php(144): Question::model()
+#3 D:\code\share\protected\admin\views\user\index.php(54): UserController->getQuestionCount('1')
+#4 D:\code\share\framework\web\CBaseController.php(126): require('D:\\code\\share\\p...')
+#5 D:\code\share\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\code\\share\\p...', Array, true)
+#6 D:\code\share\framework\web\CController.php(869): CBaseController->renderFile('D:\\code\\share\\p...', Array, true)
+#7 D:\code\share\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 D:\code\share\protected\admin\controllers\UserController.php(35): CController->render('index', Array)
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=user/index
+HTTP_REFERER=http://s.me/backend.php?r=site/index
+---
+2015/05/04 16:18:57 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`question_detail`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`published_uid`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`lock`,`share_question`.`ip`,`share_users`.`username` from `share_question` left join `share_users` on (`share_users`.`uid`=`share_question`.`published_uid`) where `share_question`.`id`=:id.
+in D:\code\share\protected\admin\controllers\QuestionController.php (57)
+in D:\code\share\backend.php (13)
+2015/05/04 16:18:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`question_detail`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`published_uid`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`lock`,`share_question`.`ip`,`share_users`.`username` from `share_question` left join `share_users` on (`share_users`.`uid`=`share_question`.`published_uid`) where `share_question`.`id`=:id' in D:\code\share\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\code\share\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\code\share\protected\admin\controllers\QuestionController.php(57): CDbCommand->queryRow(true, Array)
+#2 [internal function]: QuestionController->actionUpdate('12')
+#3 D:\code\share\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#4 D:\code\share\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionController), Object(ReflectionMethod), Array)
+#5 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\code\share\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('question/update')
+#10 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\code\share\backend.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/backend.php?r=question/update&id=12
+HTTP_REFERER=http://s.me/backend.php?r=question/index
+---
+2015/05/04 16:19:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\QuestionController.php (101)
+in D:\code\share\backend.php (13)
+2015/05/04 20:39:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\UserController.php (144)
+in D:\code\share\protected\admin\views\user\index.php (54)
+2015/05/04 20:39:36 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Question" 对应的 table "{{question}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Question))
+#1 D:\code\share\protected\models\Question.php(31): CActiveRecord::model('Question')
+#2 D:\code\share\protected\admin\controllers\UserController.php(144): Question::model()
+#3 D:\code\share\protected\admin\views\user\index.php(54): UserController->getQuestionCount('1')
+#4 D:\code\share\framework\web\CBaseController.php(126): require('D:\\code\\share\\p...')
+#5 D:\code\share\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\code\\share\\p...', Array, true)
+#6 D:\code\share\framework\web\CController.php(869): CBaseController->renderFile('D:\\code\\share\\p...', Array, true)
+#7 D:\code\share\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 D:\code\share\protected\admin\controllers\UserController.php(35): CController->render('index', Array)
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=user/index
+HTTP_REFERER=http://s.me/backend.php
+---
+2015/05/04 20:42:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\UserController.php (144)
+in D:\code\share\protected\admin\views\user\index.php (54)
+2015/05/04 20:42:23 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Question" 对应的 table "{{question}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Question))
+#1 D:\code\share\protected\models\Question.php(31): CActiveRecord::model('Question')
+#2 D:\code\share\protected\admin\controllers\UserController.php(144): Question::model()
+#3 D:\code\share\protected\admin\views\user\index.php(54): UserController->getQuestionCount('1')
+#4 D:\code\share\framework\web\CBaseController.php(126): require('D:\\code\\share\\p...')
+#5 D:\code\share\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\code\\share\\p...', Array, true)
+#6 D:\code\share\framework\web\CController.php(869): CBaseController->renderFile('D:\\code\\share\\p...', Array, true)
+#7 D:\code\share\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 D:\code\share\protected\admin\controllers\UserController.php(35): CController->render('index', Array)
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=user/index
+HTTP_REFERER=http://s.me/backend.php
+---
+2015/05/04 20:42:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\UserController.php (144)
+in D:\code\share\protected\admin\views\user\index.php (54)
+2015/05/04 20:42:25 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Question" 对应的 table "{{question}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Question))
+#1 D:\code\share\protected\models\Question.php(31): CActiveRecord::model('Question')
+#2 D:\code\share\protected\admin\controllers\UserController.php(144): Question::model()
+#3 D:\code\share\protected\admin\views\user\index.php(54): UserController->getQuestionCount('1')
+#4 D:\code\share\framework\web\CBaseController.php(126): require('D:\\code\\share\\p...')
+#5 D:\code\share\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\code\\share\\p...', Array, true)
+#6 D:\code\share\framework\web\CController.php(869): CBaseController->renderFile('D:\\code\\share\\p...', Array, true)
+#7 D:\code\share\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 D:\code\share\protected\admin\controllers\UserController.php(35): CController->render('index', Array)
+#9 D:\code\share\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#10 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\code\share\framework\web\CWebApplication.php(282): CController->run('index')
+#14 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#15 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 D:\code\share\backend.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/backend.php?r=user/index
+HTTP_REFERER=http://s.me/backend.php
+---
+2015/05/04 20:57:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "Check" 动作.' in D:\code\share\framework\web\CController.php:483
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(270): CController->missingAction('Check')
+#1 D:\code\share\framework\web\CWebApplication.php(282): CController->run('Check')
+#2 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/Check')
+#3 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\code\share\backend.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend.php?r=user/Check
+HTTP_REFERER=http://s.me/backend.php
+---
+2015/05/04 20:57:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "Check" 动作.' in D:\code\share\framework\web\CController.php:483
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(270): CController->missingAction('Check')
+#1 D:\code\share\framework\web\CWebApplication.php(282): CController->run('Check')
+#2 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/Check')
+#3 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\code\share\backend.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend.php?r=user/Check
+HTTP_REFERER=http://s.me/backend.php
+---

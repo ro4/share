@@ -1,7 +1,7 @@
 <div class="navbar navbar-static-top navbar-inverse">
         	<div class="navbar-inner">
             	<div style="padding:0 30px;">
-                	<a href="/" class="brand" style="margin-right:20px;">ASK后台管理</a>
+                	<a href="/" class="brand" style="margin-right:20px;">SHARE后台管理</a>
                 	<div class="nav-collapse collapse navbar-inverse-collapse">
                         <!--  用户名头像下拉 -->
                         <ul class="nav pull-right">
@@ -32,9 +32,9 @@
 <div class="row" >
 	<div class="span3" style="min-height:600px;background-color: #e9e9e9;border-right: 1px solid #c4c8cb;">
 	<div class="sidebar-menu">
-		<a href="#questionMenu" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-book icon-large"></i> 问题管理</a>
+		<a href="#questionMenu" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-book icon-large"></i> 资料管理</a>
 		<ul id="questionMenu" class="nav nav-list collapse menu-second">
-			<li><a href="<?php echo $this->createUrl('question/index');?>" target="main"><i class="icon-list-alt"></i> 问题列表</a></li>
+			<li><a href="<?php echo $this->createUrl('question/index');?>" target="main"><i class="icon-list-alt"></i> 资料列表</a></li>
 		</ul>
 		
 		<!-- <a href="#topicMeun" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-tag icon-large"></i> 话题管理</a>
@@ -46,6 +46,7 @@
 		<ul id="userMeun" class="nav nav-list collapse menu-second">
             <li><a href="<?php echo $this->createUrl('user/index'); ?>" target="main"><i class="icon-list"></i> 用户列表</a></li>
 			<li><a href="<?php echo $this->createUrl('user/add'); ?>" target="main"><i class="icon-user"></i> 增加用户</a></li>
+			<li><a href="<?php echo $this->createUrl('user/Check'); ?>" target="main"><i class="icon-user"></i> 用户审核</a></li>
 		</ul>
 		
 	</div>

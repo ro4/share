@@ -8,9 +8,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
     	<li class="pull-left">
         	<b style="line-height: 35px;"><i class="icon-question-sign"></i>全部资料</b>
         </li>
-    	<li class="pull-right <?php if(isset($_GET['order']) && $_GET['order']=='unresponsive')echo 'active';?>">
-        	<a href="?order=unresponsive">等待回复</a>
-        </li>
         <li class="pull-right <?php if(isset($_GET['order']) && $_GET['order']=='hot')echo 'active';?>">
         	<a href="?order=hot">热门</a>
         </li>

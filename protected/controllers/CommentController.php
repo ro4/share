@@ -14,7 +14,6 @@ class CommentController extends Controller {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-	
 		//var_dump($_POST['AnswerForm']);
 		//启用事物处理 因为需要插入 Answer表及Question字段中的answer_count 字段
 		$transaction=Yii::app()->db->beginTransaction();

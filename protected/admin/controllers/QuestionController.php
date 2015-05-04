@@ -1,9 +1,5 @@
 <?php
-/**
- * 管理问题
- * @author silenceper
- *
- */
+
 class QuestionController extends BaseController {
 	/**
 	 * 显示问题列表
@@ -11,9 +7,9 @@ class QuestionController extends BaseController {
 	public function actionIndex(){
 
 
-		$sql="select `{{question}}`.`id`,`{{question}}`.`question_content`,`{{question}}`.`add_time`,`{{question}}`.`update_time`,`{{question}}`.`answer_count`,`{{question}}`.`view_count`,`{{question}}`.`lock`,`{{question}}`.`focus_count`,`{{question}}`.`comment_count`,`{{question}}`.`best_answer`,`{{question}}`.`ip`,`{{users}}`.`username`,`{{users}}`.`uid`
-				from `{{question}}`				
-				left join `{{users}}` on (`{{users}}`.`uid` = `{{question}}`.`published_uid`)";
+		$sql="select `{{data}}`.`id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`update_time`,`{{data}}`.`download_count`,`{{data}}`.`view_count`,`{{data}}`.`focus_count`,`{{data}}`.`comment_count`,`{{data}}`.`ip`,`{{users}}`.`username`,`{{users}}`.`uid`
+				from `{{data}}`				
+				left join `{{users}}` on (`{{users}}`.`uid` = `{{data}}`.`published_uid`)";
 
 		$condition=array();
 		//根据uid搜索
@@ -22,7 +18,7 @@ class QuestionController extends BaseController {
 		}
 
 		if(isset($_POST['content'])){
-			$condition[]=" `{{question}}`.`question_content` like '%{$_POST['content']}%'";
+			$condition[]=" `{{data}}`.`data_title` like '%{$_POST['content']}%'";
 		}
 
 		$conditions=implode('AND', $condition);
@@ -31,7 +27,7 @@ class QuestionController extends BaseController {
 			$conditions=' where '.$conditions;
 			$sql.=$conditions;
 		}
-		$sql.=" order by `{{question}}`.`add_time` desc ";
+		$sql.=" order by `{{data}}`.`add_time` desc ";
 		$connection=Yii::app()->db;
 		$criteria = new CDbCriteria;
 		$models=$connection->createCommand($sql)->queryAll();

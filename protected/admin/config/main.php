@@ -11,7 +11,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'language'=>'zh_cn',
 	'timeZone'=>'Asia/Shanghai',
-	'name'=>'问答系统!-后台管理',
+	'name'=>'知识分享!-后台管理',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -69,11 +69,11 @@ return array(
 		// uncomment the following to use a MySQL database
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=ask',
+			'connectionString' => 'mysql:host=localhost;dbname=share',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '123',
-			'tablePrefix' => 'ask_',
+			'password' => '',
+			'tablePrefix' => 'share_',
 			'charset' => 'utf8',
 			'enableProfiling'=>true,
 		),

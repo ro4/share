@@ -7,7 +7,7 @@
 	)); ?>
 	搜索关键字:<input type="text" name="content"/>	
 	<input type="submit" value="查询" class="btn btn-info">
-	<span class="text-error">共有 <?php echo $count; ?>个问题</span>
+	<span class="text-error">共有 <?php echo $count; ?>个资料</span>
 	<?php $this->endWidget(); ?>
 
 </div>
@@ -20,36 +20,25 @@
 				<th>标题</th>
 				<th>作者</th>
 				<th>时间</th>
-				<th>回复数</th>
+				<th>下载数</th>
 				<th>关注数</th>
 				<th>评论数</th>
 				<th>浏览数</th>
-				<th>状态</th>
 				<th>操作</th>
 			</tr>
 		</thead>
 		<tbody>
 		<?php foreach($models as $model):?>
-			<?php 
-				$status='';
-				if($model['best_answer']){
-					$status='success';
-				}elseif($model['lock']){
-					$status='error';
-				}
-			 ?>
-
-			<tr class="<?php echo $status; ?>">
+			<tr>
 				<td><?php echo $model['id']?></td>		
-				<td><a href="/question/index?id=<?php echo $model['id'] ?>" target="_blank"><?php echo $model['question_content']?></a></td>		
+				<td><a href="/data/index?id=<?php echo $model['id'] ?>" target="_blank"><?php echo $model['data_title']?></a></td>		
 				<td><a href="
-					<?php echo $this->createUrl('question/index',array('uid'=>$model['uid'])); ?>"><?php echo $model['username']?></a></td>	
+					<?php echo $this->createUrl('user/index',array('uid'=>$model['uid'])); ?>"><?php echo $model['username']?></a></td>	
 				<td><?php echo date('Y-m-d H:i:s',$model['add_time'])?></td>		
-				<td><?php echo $model['answer_count']?></td>		
+				<td><?php echo $model['download_count']?></td>		
 				<td><?php echo $model['focus_count']?></td>		
 				<td><?php echo $model['comment_count']?></td>		
-				<td><?php echo $model['view_count']?></td>	
-				<td><?php  echo ($model['lock']==1) ?  '<span class="text-error">锁定</span>': '正常';?></td>		
+				<td><?php echo $model['view_count']?></td>			
 				<td>
 					<a href="<?php echo $this->createUrl('question/update',array('id'=>$model['id'])); ?>">编辑</a> &nbsp; / &nbsp;
 					<a href="<?php echo $this->createUrl('question/delete',array('id'=>$model['id'])); ?>" class="text-error" onclick="return confirm('您确认要删除吗，删除之后将无法恢复?')">删除</a> 

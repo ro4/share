@@ -138,17 +138,17 @@ class UserController extends BaseController {
 
 
 	/**
-	 * 获取提问数
+	 * 获取分享数目
 	 */
-	public function getQuestionCount($uid){
-		return Question::model()->count('published_uid=:uid',array(':uid'=>$uid));
+	public function getDataCount($uid){
+		return Data::model()->count('published_uid=:uid',array(':uid'=>$uid));
 	}
 
 	/**
-	 * 获取回答数
+	 * 获取评论数目
 	 */
-	public function getAnswerCount($uid){
-		return Answer::model()->count('uid=:uid',array(':uid'=>$uid));
+	public function getCommentCount($uid){
+		return Comment::model()->count('uid=:uid',array(':uid'=>$uid));
 	}
 
 }

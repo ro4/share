@@ -21,8 +21,8 @@
 				<th>性别</th>
 				<th>注册时间</th>				
 				<th>登入时间</th>	
-				<th>提问数</th>
-				<th>回答数</th>
+				<th>资料数</th>
+				<th>评论数</th>
 				<th>操作</th>				
 			</tr>
 		</thead>
@@ -51,10 +51,10 @@
 					<abbr title="ip:<?php echo $model['last_ip'] ?>"><?php echo date('Y-m-d H:i:s',$model['last_login']); ?></abbr>
 				</td>
 				<td>
-					<?php echo $this->getQuestionCount($model['uid']); ?>
+					<?php echo $this->getDataCount($model['uid']); ?>
 				</td>	
 				<td>
-					<?php echo $this->getAnswerCount($model['uid']); ?>
+					<?php echo $this->getCommentCount($model['uid']); ?>
 				</td>
 				<td>
 					<a href="<?php echo $this->createUrl('update',array('uid'=>$model['uid'])) ?>">编辑</a> 
