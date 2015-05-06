@@ -26,7 +26,12 @@
 				</li>
 				<li>
 					上次登入:<?php echo date('Y-m-d',$user_model->last_login); ?>					
-				</li>		
+				</li>
+				<li>
+					<?php if(!$user_model->authority){?>
+					<a href="/user/check" class="btn btn-success">申请审核</a>
+					<?php } ?>
+				</li>			
 			</ul>
 			
 		</div>

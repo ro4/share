@@ -10,7 +10,7 @@ class UserController extends BaseController {
 	 * 显示用户列表
 	 */
 	public function actionIndex(){
-		$sql="select `{{users}}`.`uid`,`{{users}}`.`username`,`{{users}}`.`email`,`{{users}}`.`avatar_file`,`{{users}}`.`sex`,`{{users}}`.`birthday`,`{{users}}`.`reg_time`,`{{users}}`.`reg_ip`,`{{users}}`.`last_login`,`{{users}}`.`last_ip` from `{{users}}`";
+		$sql="select `{{users}}`.`uid`,`{{users}}`.`username`,`{{users}}`.`email`,`{{users}}`.`avatar_file`,`{{users}}`.`sex`,`{{users}}`.`birthday`,`{{users}}`.`reg_time`,`{{users}}`.`reg_ip`,`{{users}}`.`last_login`,`{{users}}`.`authority`,`{{users}}`.`last_ip` from `{{users}}`";
 
 		//查找用户
 		if(isset($_POST['content'])){

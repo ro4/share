@@ -12,8 +12,13 @@ class PublishController extends BaseController
 	 */
     public function actionCreate()
     {
-    	
-        $this->render('create');
+    	$user_model=Users::model()->findByPk(Yii::app()->user->id);
+    	if($user_model['authority']){
+    		$this->render('create');
+    	}
+    	else {
+    		$this->redirect($this->createUrl('user/check'));
+    	}
     }
 
 

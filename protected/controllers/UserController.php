@@ -45,6 +45,9 @@ class UserController extends BaseController {
 			));
 	}	
 
+    public function actionCheck(){
+    	$this->render('check');
+    }
 	/**
 	 * 获取自己发布的问题
 	 * return model pages

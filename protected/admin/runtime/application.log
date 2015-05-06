@@ -3328,3 +3328,36 @@ Stack trace:
 REQUEST_URI=/backend.php?r=user/Check
 HTTP_REFERER=http://s.me/backend.php
 ---
+2015/05/04 21:16:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "Check" 动作.' in D:\code\share\framework\web\CController.php:483
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(270): CController->missingAction('Check')
+#1 D:\code\share\framework\web\CWebApplication.php(282): CController->run('Check')
+#2 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/Check')
+#3 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\code\share\backend.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend.php?r=user/Check
+HTTP_REFERER=http://s.me/backend.php?r=site/index
+---
+2015/05/04 21:17:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "Check" 动作.' in D:\code\share\framework\web\CController.php:483
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(270): CController->missingAction('Check')
+#1 D:\code\share\framework\web\CWebApplication.php(282): CController->run('Check')
+#2 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/Check')
+#3 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\code\share\backend.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend.php?r=user/Check
+HTTP_REFERER=http://s.me/backend.php
+---
+2015/05/04 21:17:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "Check" 动作.' in D:\code\share\framework\web\CController.php:483
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(270): CController->missingAction('Check')
+#1 D:\code\share\framework\web\CWebApplication.php(282): CController->run('Check')
+#2 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('user/Check')
+#3 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\code\share\backend.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend.php?r=user/Check
+HTTP_REFERER=http://s.me/backend.php
+---
