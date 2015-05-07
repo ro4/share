@@ -46,7 +46,15 @@ class UserController extends BaseController {
 	}	
 
     public function actionCheck(){
-    	$this->render('check');
+    	$checkModel = UserCheck::model()->findByAttributes(array('uid' => Yii::app()->user->id ));
+    	if($checkModel){
+    		$this->error('已经提交审核,请等待。。',$this->createUrl('user/check'));
+    	} else if($_POST){
+    		$this->success('添加成功',$this->createUrl('user/check'));
+    	} else {
+    		//渲染check页面
+    		$this->render('check');
+    	}
     }
 	/**
 	 * 获取自己发布的问题
