@@ -50,7 +50,16 @@ class UserController extends BaseController {
     	if($checkModel){
     		$this->error('已经提交审核,请等待。。',$this->createUrl('user/check'));
     	} else if($_POST){
-    		$this->success('添加成功',$this->createUrl('user/check'));
+    		$model = new CheckForm();
+    		$userCheck = new UserCheck();
+    		$userCheck->uid = Yii::app()->user->id;
+    		$userCheck->time = time();
+    		$userCheck->remark = $_POST['CheckForm']['remar'];
+    		if($userCheck->save()){
+    			$this->success('添加成功',$this->createUrl('user/check'));
+    		} else {
+    			$this->error('添加失败',$this->createUrl('user/check'));
+    		}
     	} else {
     		//渲染check页面
     		$this->render('check');
