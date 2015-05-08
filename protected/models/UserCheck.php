@@ -60,6 +60,7 @@ class UserCheck extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'uid' => 'User id',
+			'username' => 'User Name',
 			'time' => 'Time',
 			'result' => 'Result',
 			'remark' => 'Remark',

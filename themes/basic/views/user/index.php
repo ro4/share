@@ -28,9 +28,13 @@
 					上次登入:<?php echo date('Y-m-d',$user_model->last_login); ?>					
 				</li>
 				<li>
-					<?php if(!$user_model->authority){?>
+					<?php if(!$user_model->authority && !$check_model){?>
 					<a href="/user/check" class="btn btn-success">申请审核</a>
-					<?php } ?>
+					<?php } else if($user_model->authority) {?>
+					<a href="/publish/index" class="btn btn-success">发布资料</a>
+					<?php } else if($check_model) {?>
+					<a class="btn btn-success" disabled="disabled">审核中，请等待..</a>
+					<?php }?>
 				</li>			
 			</ul>
 			

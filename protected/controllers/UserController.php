@@ -52,11 +52,13 @@ class UserController extends BaseController {
     	if($checkModel){
     		$this->error('已经提交审核,请等待。。',$this->createUrl('site/index'));
     	} else if($_POST){
+    		$user_model = Users::model()->findByPk(Yii::app()->user->id);
     		$model = new CheckForm();
     		$userCheck = new UserCheck();
     		$userCheck->uid = Yii::app()->user->id;
     		$userCheck->time = time();
     		$userCheck->remark = $_POST['CheckForm']['remark'];
+    		$userCheck->username = $user_model['username'];
     		if($userCheck->save()){
     			$this->success('添加成功',$this->createUrl('user/check'));
     		} else {

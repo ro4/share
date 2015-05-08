@@ -136,6 +136,15 @@ class UserController extends BaseController {
 
 	}
 
+	/**
+	 * 用户审核
+	 */
+	public function actionCheck(){
+		var_dump(Yii::app()->user->name);exit;
+		$sql="select `{{user_check}}`.`id`,`{{user_check}}`.`uid`,`{{user_check}}`.`time`,`{{user_check}}`.`result`,`{{user_check}}`.`check`,`{{user_check}}`.`birthday`,`{{user_check}}`.`reg_time`,`{{user_check}}`.`reg_ip`,`{{user_check}}`.`last_login`,`{{user_check}}`.`authority`,`{{user_check}}`.`last_ip` 
+		from `{{user_check}}` left join {{}}";
+	}
+
 
 	/**
 	 * 获取分享数目
