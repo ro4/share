@@ -29,15 +29,6 @@ class SiteController extends Controller{
 				order by `{{data}}`.`view_count` desc
 				";
 				break;
-			//未回复数排序
-			case 'unresponsive':
-				$sql="select `{{data}}`.`id` as `data_id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`comment_count`,`{{data}}`.`download_count`,`{{data}}`.`view_count`,`{{data}}`.`comment_state`
-				,`{{users}}`.`avatar_file`,`{{users}}`.`uid`
-				from `{{data}}`
-				left join `{{users}}` on (`{{data}}`.`published_uid`=`{{users}}`.`uid`) 
-				where `{{data}}`.`comment_count` = 0
-				";
-				break;
 			//默认根据时间排序
 			default:
 				$sql="select `{{data}}`.`id` as `data_id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`comment_count`,`{{data}}`.`download_count`,`{{data}}`.`view_count`,`{{data}}`.`comment_state`

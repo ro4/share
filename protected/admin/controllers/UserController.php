@@ -140,9 +140,89 @@ class UserController extends BaseController {
 	 * 用户审核
 	 */
 	public function actionCheck(){
-		var_dump(Yii::app()->user->name);exit;
-		$sql="select `{{user_check}}`.`id`,`{{user_check}}`.`uid`,`{{user_check}}`.`time`,`{{user_check}}`.`result`,`{{user_check}}`.`check`,`{{user_check}}`.`birthday`,`{{user_check}}`.`reg_time`,`{{user_check}}`.`reg_ip`,`{{user_check}}`.`last_login`,`{{user_check}}`.`authority`,`{{user_check}}`.`last_ip` 
-		from `{{user_check}}` left join {{}}";
+		$sql="select `{{user_check}}`.`uid`,`{{user_check}}`.`username`,`{{user_check}}`.`id`,`{{user_check}}`.`time`,`{{user_check}}`.`result`,`{{user_check}}`.`remark` from `{{user_check}}`";
+
+		//查找用户
+		if(isset($_POST['content'])){
+			$sql.=" where `{{user_check}}`.`username` like '%{$_POST['content']}%'";
+		}
+
+		$connection=Yii::app()->db;
+		$criteria = new CDbCriteria;
+		$models=$connection->createCommand($sql)->queryAll();
+		$count=count($models);
+		$pages = new CPagination($count);
+		$pages->pageSize = 14;
+		$pages->applylimit($criteria);
+		$models=$connection->createCommand($sql." LIMIT :offset,:limit");
+		$models->bindValue(':offset', $pages->currentPage*$pages->pageSize);
+		$models->bindValue(':limit', $pages->pageSize);
+		$models=$models->queryAll();
+		$this->render('check',array(
+				'models'=>$models,
+				'pages'=>$pages,
+				'count'=>$count,
+		));
+	}
+
+	/**
+	 * 审核通过
+	 */
+	public function actionCheckOk(){
+		if(!$_GET){
+  		$this->error('输入有错误');
+		}
+		$uid = $_GET['uid'];
+		$id = $_GET['id'];
+
+ 		$transaction = Yii::app()->db->beginTransaction();
+ 		try{
+ 			$res1 = UserCheck::model()->deleteByPk($id);
+ 			if(!$res1) {
+ 				throw new ErrorException('删除出错了');
+ 			}
+
+ 			$res2 = Users::model()->updateByPk($uid,array('authority' => 1));
+
+ 			if(!$res2){
+ 				throw new ErrorException('更新出错了');
+ 			}
+ 			$transaction->commit();
+ 			$this->success('修改成功',$this->createUrl('user/check'));
+ 		}catch (ErrorException $e){
+ 			$transaction->rollBack();
+ 			$this->error('修改失败',$this->createUrl('user/check'));
+ 		}
+	}
+
+	/**
+	 * 审核拒绝
+	 */
+	public function actionCheckRej(){
+		if(!$_GET){
+  		$this->error('输入有错误');
+		}
+		$uid = $_GET['uid'];
+		$id = $_GET['id'];
+
+ 		$transaction = Yii::app()->db->beginTransaction();
+ 		try{
+ 			$res1 = UserCheck::model()->deleteByPk($id);
+ 			if(!$res1) {
+ 				throw new ErrorException('删除出错了');
+ 			}
+
+ 			$res2 = Users::model()->updateByPk($uid,array('authority' => 2));
+
+ 			if(!$res2){
+ 				throw new ErrorException('更新出错了');
+ 			}
+ 			$transaction->commit();
+ 			$this->success('修改成功',$this->createUrl('user/check'));
+ 		}catch (ErrorException $e){
+ 			$transaction->rollBack();
+ 			$this->error($e->getMessage(),$this->createUrl('user/check'));
+ 		}
 	}
 
 

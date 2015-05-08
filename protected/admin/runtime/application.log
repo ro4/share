@@ -3404,3 +3404,121 @@ Stack trace:
 REQUEST_URI=/backend.php?r=user/Check
 HTTP_REFERER=http://s.me/backend.php?r=site/index
 ---
+2015/05/08 14:41:25 [error] [php] Undefined index: state (D:\code\share\protected\admin\views\user\check.php:38)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(869): UserController->renderFile()
+#1 D:\code\share\framework\web\CController.php(782): UserController->renderPartial()
+#2 D:\code\share\protected\admin\controllers\UserController.php(165): UserController->render()
+#3 D:\code\share\framework\web\actions\CInlineAction.php(49): UserController->actionCheck()
+#4 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\code\share\framework\web\CController.php(286): UserController->runAction()
+#6 D:\code\share\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 D:\code\share\framework\web\CWebApplication.php(282): UserController->run()
+#8 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=user/Check
+in D:\code\share\protected\admin\views\user\check.php (38)
+in D:\code\share\protected\admin\controllers\UserController.php (165)
+in D:\code\share\backend.php (13)
+2015/05/08 15:45:34 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`question_detail`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`published_uid`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`lock`,`share_question`.`ip`,`share_users`.`username` from `share_question` left join `share_users` on (`share_users`.`uid`=`share_question`.`published_uid`) where `share_question`.`id`=:id.
+in D:\code\share\protected\admin\controllers\QuestionController.php (57)
+in D:\code\share\backend.php (13)
+2015/05/08 15:45:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`question_detail`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`published_uid`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`lock`,`share_question`.`ip`,`share_users`.`username` from `share_question` left join `share_users` on (`share_users`.`uid`=`share_question`.`published_uid`) where `share_question`.`id`=:id' in D:\code\share\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\code\share\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\code\share\protected\admin\controllers\QuestionController.php(57): CDbCommand->queryRow(true, Array)
+#2 [internal function]: QuestionController->actionUpdate('14')
+#3 D:\code\share\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#4 D:\code\share\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionController), Object(ReflectionMethod), Array)
+#5 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\code\share\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('question/update')
+#10 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\code\share\backend.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/backend.php?r=question/update&id=14
+HTTP_REFERER=http://s.me/backend.php?r=question/index
+---
+2015/05/08 15:45:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\QuestionController.php (101)
+in D:\code\share\backend.php (13)
+2015/05/08 15:46:31 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`question_detail`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`published_uid`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`lock`,`share_question`.`ip`,`share_users`.`username` from `share_question` left join `share_users` on (`share_users`.`uid`=`share_question`.`published_uid`) where `share_question`.`id`=:id.
+in D:\code\share\protected\admin\controllers\QuestionController.php (57)
+in D:\code\share\backend.php (13)
+2015/05/08 15:46:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: select `share_question`.`id`,`share_question`.`question_content`,`share_question`.`question_detail`,`share_question`.`add_time`,`share_question`.`update_time`,`share_question`.`published_uid`,`share_question`.`answer_count`,`share_question`.`view_count`,`share_question`.`focus_count`,`share_question`.`comment_count`,`share_question`.`best_answer`,`share_question`.`lock`,`share_question`.`ip`,`share_users`.`username` from `share_question` left join `share_users` on (`share_users`.`uid`=`share_question`.`published_uid`) where `share_question`.`id`=:id' in D:\code\share\framework\db\CDbCommand.php:541
+Stack trace:
+#0 D:\code\share\framework\db\CDbCommand.php(414): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\code\share\protected\admin\controllers\QuestionController.php(57): CDbCommand->queryRow(true, Array)
+#2 [internal function]: QuestionController->actionUpdate('14')
+#3 D:\code\share\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(QuestionController), Array)
+#4 D:\code\share\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(QuestionController), Object(ReflectionMethod), Array)
+#5 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\code\share\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('question/update')
+#10 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\code\share\backend.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/backend.php?r=question/update&id=14
+HTTP_REFERER=http://s.me/backend.php?r=question/index
+---
+2015/05/08 15:52:30 [error] [php] Undefined index: comment_state (D:\code\share\protected\admin\views\question\update.php:31)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(869): QuestionController->renderFile()
+#1 D:\code\share\framework\web\CController.php(782): QuestionController->renderPartial()
+#2 D:\code\share\protected\admin\controllers\QuestionController.php(62): QuestionController->render()
+#3 unknown(0): QuestionController->actionUpdate()
+#4 D:\code\share\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 D:\code\share\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 D:\code\share\framework\web\CController.php(286): QuestionController->runAction()
+#8 D:\code\share\framework\web\CController.php(265): QuestionController->runActionWithFilters()
+#9 D:\code\share\framework\web\CWebApplication.php(282): QuestionController->run()
+#10 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=question/update&id=14
+in D:\code\share\protected\admin\views\question\update.php (31)
+in D:\code\share\protected\admin\controllers\QuestionController.php (62)
+in D:\code\share\backend.php (13)
+2015/05/08 17:53:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\QuestionController.php (77)
+in D:\code\share\backend.php (13)
+2015/05/08 17:53:06 [error] [exception.CDbException] exception 'CDbException' with message '数据库中无法找到 active record class "Question" 对应的 table "{{question}}".' in D:\code\share\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 D:\code\share\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Question))
+#1 D:\code\share\protected\models\Question.php(31): CActiveRecord::model('Question')
+#2 D:\code\share\protected\admin\controllers\QuestionController.php(77): Question::model()
+#3 D:\code\share\framework\web\actions\CInlineAction.php(49): QuestionController->actionCheckUpdate()
+#4 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\code\share\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\code\share\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\code\share\framework\web\CWebApplication.php(282): CController->run('checkupdate')
+#8 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('question/checku...')
+#9 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\code\share\backend.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/backend.php?r=question/checkupdate
+HTTP_REFERER=http://s.me/backend.php?r=question/update&id=4
+---
+2015/05/08 17:56:06 [error] [php] Undefined index: lock (D:\code\share\protected\admin\controllers\QuestionController.php:80)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(286): QuestionController->runAction()
+#1 D:\code\share\framework\web\CController.php(265): QuestionController->runActionWithFilters()
+#2 D:\code\share\framework\web\CWebApplication.php(282): QuestionController->run()
+#3 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=question/checkupdate
+in D:\code\share\protected\admin\controllers\QuestionController.php (80)
+in D:\code\share\backend.php (13)
+2015/05/08 17:57:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'share.share_question' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `share_question`.
+in D:\code\share\protected\models\Question.php (31)
+in D:\code\share\protected\admin\controllers\QuestionController.php (103)
+in D:\code\share\backend.php (13)

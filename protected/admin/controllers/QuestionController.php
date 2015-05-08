@@ -53,7 +53,9 @@ class QuestionController extends BaseController {
 	 *
 	 */
 	public function actionUpdate($id){
-		$sql="select `{{question}}`.`id`,`{{question}}`.`question_content`,`{{question}}`.`question_detail`,`{{question}}`.`add_time`,`{{question}}`.`update_time`,`{{question}}`.`published_uid`,`{{question}}`.`answer_count`,`{{question}}`.`view_count`,`{{question}}`.`focus_count`,`{{question}}`.`comment_count`,`{{question}}`.`best_answer`,`{{question}}`.`lock`,`{{question}}`.`ip`,`{{users}}`.`username` from `{{question}}` left join `{{users}}` on (`{{users}}`.`uid`=`{{question}}`.`published_uid`) where `{{question}}`.`id`=:id";
+		$sql="select `{{data}}`.`id`,`{{data}}`.`data_title`,`{{data}}`.`data_detail`,`{{data}}`.`add_time`,`{{data}}`.`update_time`,`{{data}}`.`published_uid`,`{{data}}`.`state`,`{{data}}`.`comment_state`,`{{data}}`.`comment_count`,`{{data}}`.`view_count`,`{{data}}`.`focus_count`,`{{data}}`.`comment_count`,`{{data}}`.`download_count`,`{{data}}`.`state`,`{{data}}`.`ip`,`{{users}}`.`username` from `{{data}}` 
+		left join `{{users}}` on (`{{users}}`.`uid`=`{{data}}`.`published_uid`) 
+		where `{{data}}`.`id`=:id";
 		$model=Yii::app()->db->createCommand($sql)->queryRow(true,array(':id'=>$id));
 		$this->render('update',array(
 				'model'=>$model,
@@ -72,10 +74,10 @@ class QuestionController extends BaseController {
 
 		//开始处理提交信息
 		//var_dump($_POST);
-		$m=Question::model()->updateByPk($_POST['id'],array(
-			'question_content'=>htmlspecialchars($_POST['question_content']),
-			'question_detail'=>htmlspecialchars($_POST['question_detail']),
-			'lock'=>$_POST['lock'],
+		$m=Data::model()->updateByPk($_POST['id'],array(
+			'data_title'=>htmlspecialchars($_POST['data_title']),
+			'data_detail'=>htmlspecialchars($_POST['data_detail']),
+			'comment_state'=>$_POST['comment_state'],
 			'update_time'=>time(),
 			));
 		if(false!==$m){
@@ -98,16 +100,16 @@ class QuestionController extends BaseController {
 		try {
 			
 			//删除question 表信息
-			if(!Question::model()->deleteByPk($id)){
-				throw new Exception("删除question表失败");
+			if(!Data::model()->deleteByPk($id)){
+				throw new Exception("删除data表失败");
 			}
 
 			//删除 topic_question 表 首先把 topic  id 查找出来
 			//获取topic id
-			$topic_ids=TopicQuestion::model()->findAll(array(
+			$topic_ids=TopicData::model()->findAll(array(
 					'select'=>'topic_id',
-					'condition'=>'question_id=:question_id',
-					'params'=>array(':question_id'=>$id),
+					'condition'=>'data_id=:data_id',
+					'params'=>array(':data_id'=>$id),
 				));
 
 			//更新 topic次数
@@ -119,39 +121,28 @@ class QuestionController extends BaseController {
 			}
 
 			//删除topic_question 表中信息
-			if(false === TopicQuestion::model()->deleteAll('question_id=:question_id',array('question_id'=>$id))){
-				throw new ErrorException('删除topic_question中信息失败');
+			if(false === TopicData::model()->deleteAll('data_id=:data_id',array('data_id'=>$id))){
+				throw new ErrorException('删除topic_data中信息失败');
 			}
 
-			//删除question_comment 中信息
-			if(false === QuestionComments::model()->deleteAll('question_id=:question_id',array('question_id'=>$id))){
-				throw new ErrorException('删除question_comment中信息失败');
-			}
-
-			//获取answer_comment 中id
-			$answer_comment_models=Answer::model()->findAll(array(
+			//获取comment 中id
+			$comment_models=Comment::model()->findAll(array(
 					'select'=>'id',
-					'condition'=>'question_id=:question_id',
+					'condition'=>'data_id=:data_id',
 					'params'=>array(
-						':question_id'=>$id,
+						':data_id'=>$id,
 						),
 				));
 
-			//删除answer_comment 中信息
-			foreach ($answer_comment_models as $answer_comment_model) {
-				if(false === AnswerComments::model()->deleteAll('answer_id=:answer_id',array(':answer_id'=>$answer_comment_model->id))){
-					throw new ErrorException('删除answer_comment中信息失败');
-				}
-			}
 
 			//删除answer 表中信息
-			if(false === Answer::model()->deleteAll('question_id=:question_id',array('question_id'=>$id))){
-				throw new ErrorException('删除answer中信息失败');
+			if(false === Comment::model()->deleteAll('data_id=:data_id',array('data_id'=>$id))){
+				throw new ErrorException('删除comment中信息失败');
 			}
 
 			//删除question_focus 中信息
-			if(false === QuestionFocus::model()->deleteAll('question_id=:question_id',array('question_id'=>$id))){
-				throw new ErrorException('删除question_focus 中信息失败');
+			if(false === DataFocus::model()->deleteAll('data_id=:data_id',array('data_id'=>$id))){
+				throw new ErrorException('删除data_focus 中信息失败');
 			}
 
 			$transaction->commit();

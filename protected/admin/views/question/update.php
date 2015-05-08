@@ -10,29 +10,26 @@
 		<tr>
 			<th class="text-right">标题：</th>
 			<td>
-				<input type="text" name="question_content" value="<?php echo $model['question_content'] ?>" />
-				<?php if($model['best_answer']): ?>
-					<span class="label label-success">已解决</span>
-				<?php endif; ?>
-				<?php if($model['lock']): ?>
+				<input type="text" name="data_title" value="<?php echo $model['data_title'] ?>" />
+				<?php if($model['state']): ?>
 					<span class="label label-important">已锁定</span>
 				<?php endif; ?>
 			</td>		
 		</tr>
 		<tr>
 			<th class="text-right">作者：</th>
-			<td><a target="_blank" href="/question/index?id=<?php echo $model['id'] ?>" ><?php echo $model['username'] ?></a></td>		
+			<td><a target="_blank" href="/data/index?id=<?php echo $model['id'] ?>" ><?php echo $model['username'] ?></a></td>		
 		</tr>
 		<tr>
 			<th class="text-right">详细：</th>
-			<td><textarea name="question_detail"><?php echo  $model['question_detail'] ;?></textarea></td>		
+			<td><textarea name="data_detail"><?php echo  $model['data_detail'] ;?></textarea></td>		
 		</tr>
 		<tr>
 			<th>锁定</th>
 			<td>
-				<select name='lock'>
-					<option value="0" <?php if($model['lock']==0)echo 'selected' ?> >正常</option>
-					<option value="1" <?php if($model['lock']==1)echo 'selected' ?> >锁定</option>
+				<select name='comment_state'>
+					<option value="0" <?php if($model['comment_state']==0)echo 'selected' ?> >正常</option>
+					<option value="1" <?php if($model['comment_state']==1)echo 'selected' ?> >锁定</option>
 				</select>
 			</td>
 		</tr>
@@ -41,7 +38,7 @@
 			<td id="status">
 				<span class="label label-info"><?php echo $model['view_count'] ?>人查看</span>
 				<span class="label label-info"><?php echo $model['focus_count'] ?>人关注</span>
-				<span class="label label-info"><?php echo $model['answer_count'] ?>人回答</span>
+				<span class="label label-info"><?php echo $model['download_count'] ?>次下载</span>
 				<span class="label label-info"><?php echo $model['comment_count'] ?>人评论</span>
 			</td>
 		</tr>
