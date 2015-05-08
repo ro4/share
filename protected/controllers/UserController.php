@@ -11,7 +11,8 @@ class UserController extends BaseController {
 
 		//显示用户资料
 		$user_model=Users::model()->findByPk($uid);
-		
+		$checkModel = UserCheck::model()->findByAttributes(array('uid' => $uid ));
+
 		//获取ype
 		if(isset($_GET['type']) && $_GET['type']=='focus'){
 			//获取关注的问题
@@ -39,6 +40,7 @@ class UserController extends BaseController {
 		$models=$models->queryAll();	
 		$this->render('index',array(
 				'user_model'=>$user_model,
+				'check_model'=>$checkModel,
 				'models'=>$models,
 				'pages'=>$pages,
 				'count'=>$count,
@@ -48,13 +50,13 @@ class UserController extends BaseController {
     public function actionCheck(){
     	$checkModel = UserCheck::model()->findByAttributes(array('uid' => Yii::app()->user->id ));
     	if($checkModel){
-    		$this->error('已经提交审核,请等待。。',$this->createUrl('user/check'));
+    		$this->error('已经提交审核,请等待。。',$this->createUrl('site/index'));
     	} else if($_POST){
     		$model = new CheckForm();
     		$userCheck = new UserCheck();
     		$userCheck->uid = Yii::app()->user->id;
     		$userCheck->time = time();
-    		$userCheck->remark = $_POST['CheckForm']['remar'];
+    		$userCheck->remark = $_POST['CheckForm']['remark'];
     		if($userCheck->save()){
     			$this->success('添加成功',$this->createUrl('user/check'));
     		} else {
