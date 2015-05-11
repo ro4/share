@@ -48,6 +48,13 @@
 			<li><a href="<?php echo $this->createUrl('user/add'); ?>" target="main"><i class="icon-user"></i> 增加用户</a></li>
 			<li><a href="<?php echo $this->createUrl('user/Check'); ?>" target="main"><i class="icon-user"></i> 用户审核</a></li>
 		</ul>
+
+		<a href="#topicMeun" class="nav-header menu-first collapsed" data-toggle="collapse"><i class="icon-tag icon-large"></i>首页管理</a>
+		<ul id="topicMeun" class="nav nav-list collapse menu-second">
+			<li><a href="<?php echo $this->createUrl('home/user'); ?>" target="main"><i class="icon-list-alt"></i>首页用户</a></li>
+			<li><a href="<?php echo $this->createUrl('home/adduser'); ?>" target="main"><i class="icon-list-alt"></i>添加用户</a></li>
+			<li><a href="#" target="main"><i class="icon-list-alt"></i>首页话题</a></li>
+		</ul>
 		
 	</div>
 </div>

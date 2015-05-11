@@ -3522,3 +3522,86 @@ in D:\code\share\backend.php (13)
 in D:\code\share\protected\models\Question.php (31)
 in D:\code\share\protected\admin\controllers\QuestionController.php (103)
 in D:\code\share\backend.php (13)
+2015/05/11 13:38:28 [error] [php] Undefined index: uid (D:\code\share\protected\admin\controllers\HomeController.php:45)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(286): HomeController->runAction()
+#1 D:\code\share\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#2 D:\code\share\framework\web\CWebApplication.php(282): HomeController->run()
+#3 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=home/adduser
+in D:\code\share\protected\admin\controllers\HomeController.php (45)
+in D:\code\share\backend.php (13)
+2015/05/11 13:38:32 [error] [php] Undefined index: uid (D:\code\share\protected\admin\controllers\HomeController.php:45)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(286): HomeController->runAction()
+#1 D:\code\share\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#2 D:\code\share\framework\web\CWebApplication.php(282): HomeController->run()
+#3 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=home/adduser
+in D:\code\share\protected\admin\controllers\HomeController.php (45)
+in D:\code\share\backend.php (13)
+2015/05/11 13:38:33 [error] [php] Undefined index: uid (D:\code\share\protected\admin\controllers\HomeController.php:45)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(286): HomeController->runAction()
+#1 D:\code\share\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#2 D:\code\share\framework\web\CWebApplication.php(282): HomeController->run()
+#3 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=home/adduser
+in D:\code\share\protected\admin\controllers\HomeController.php (45)
+in D:\code\share\backend.php (13)
+2015/05/11 13:40:00 [error] [php] Undefined index: uid (D:\code\share\protected\admin\controllers\HomeController.php:45)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(286): HomeController->runAction()
+#1 D:\code\share\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#2 D:\code\share\framework\web\CWebApplication.php(282): HomeController->run()
+#3 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=home/adduser
+in D:\code\share\protected\admin\controllers\HomeController.php (45)
+in D:\code\share\backend.php (13)
+2015/05/11 13:40:31 [error] [php] Undefined index: uid (D:\code\share\protected\admin\controllers\HomeController.php:45)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(286): HomeController->runAction()
+#1 D:\code\share\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#2 D:\code\share\framework\web\CWebApplication.php(282): HomeController->run()
+#3 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=home/adduser
+in D:\code\share\protected\admin\controllers\HomeController.php (45)
+in D:\code\share\backend.php (13)
+2015/05/11 13:45:39 [error] [php] Undefined index: sort (D:\code\share\protected\admin\views\home\index.php:43)
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(869): HomeController->renderFile()
+#1 D:\code\share\framework\web\CController.php(782): HomeController->renderPartial()
+#2 D:\code\share\protected\admin\controllers\HomeController.php(31): HomeController->render()
+#3 D:\code\share\framework\web\actions\CInlineAction.php(49): HomeController->actionUser()
+#4 D:\code\share\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\code\share\framework\web\CController.php(286): HomeController->runAction()
+#6 D:\code\share\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#7 D:\code\share\framework\web\CWebApplication.php(282): HomeController->run()
+#8 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\code\share\backend.php(13): CWebApplication->run()
+REQUEST_URI=/backend.php?r=home/user
+in D:\code\share\protected\admin\views\home\index.php (43)
+in D:\code\share\protected\admin\controllers\HomeController.php (31)
+in D:\code\share\backend.php (13)
+2015/05/11 13:54:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "update" 动作.' in D:\code\share\framework\web\CController.php:483
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(270): CController->missingAction('update')
+#1 D:\code\share\framework\web\CWebApplication.php(282): CController->run('update')
+#2 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('home/update')
+#3 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\code\share\backend.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend.php?r=home/update&uid=1
+HTTP_REFERER=http://s.me/backend.php?r=home/user
+---

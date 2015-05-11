@@ -59,7 +59,6 @@ class SiteController extends Controller{
 				'order'=>'discuss_count desc',
 				'limit'=>'25',
 			));
-
 		$this->pageTitle="首页";
 		$this->render('index',array(
 			'models'=>$models,
@@ -168,6 +167,19 @@ class SiteController extends Controller{
 			else
 				$this->render('error', $error);
 		}
+	}
+	/**
+	 * 通过uid得到分享的资料
+	 */
+	
+	public function getDataByUid($uid){
+		$criteria=new CDbCriteria();
+		$criteria->condition="published_uid=? and state=?";
+		$criteria->limit=5;
+		$criteria->order="view_count desc";
+		$criteria->params=array($uid,1);
+		$models=Data::model()->findAll($criteria);
+		return $models;
 	}
 
 }
