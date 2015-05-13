@@ -9,7 +9,7 @@ class SiteController extends Controller{
 	 * 显示主页
 	 * @param String $order
 	 */
-	public function actionIndex($order="new"){
+	public function actionIndex($order="default"){
 		//根据不同的order 选择不同的sql语句
 		switch ($order){
 			case 'new':
@@ -31,12 +31,13 @@ class SiteController extends Controller{
 				break;
 			//默认根据时间排序
 			default:
-				$sql="select `{{data}}`.`id` as `data_id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`comment_count`,`{{data}}`.`download_count`,`{{data}}`.`view_count`,`{{data}}`.`comment_state`
-				,`{{users}}`.`avatar_file`,`{{users}}`.`uid`
-				from `{{data}}`
-				left join `{{users}}` on (`{{data}}`.`published_uid`=`{{users}}`.`uid`) 
-				order by `{{data}}`.`add_time` desc
-				";
+				$sql = "select `{{home_user}}`.`uid` from `{{home_user}}`";
+				//$sql="select `{{data}}`.`id` as `data_id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`comment_count`,`{{data}}`.`download_count`,`{{data}}`.`view_count`,`{{data}}`.`comment_state`
+				//,`{{users}}`.`avatar_file`,`{{users}}`.`uid`
+				//from `{{data}}`
+				//left join `{{users}}` on (`{{data}}`.`published_uid`=`{{users}}`.`uid`) 
+				//order by `{{data}}`.`add_time` desc
+				//";
 				break;
 		}
 		
@@ -60,6 +61,7 @@ class SiteController extends Controller{
 				'limit'=>'25',
 			));
 		$this->pageTitle="首页";
+		var_dump($models);exit;
 		$this->render('index',array(
 			'models'=>$models,
 			'pages'=>$pages,	

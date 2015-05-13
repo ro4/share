@@ -11,8 +11,11 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
         <li class="pull-right <?php if(isset($_GET['order']) && $_GET['order']=='hot')echo 'active';?>">
         	<a href="?order=hot">热门</a>
         </li>
-        <li class="pull-right <?php if(!isset($_GET['order']) || (isset($_GET['order']) && $_GET['order']!='hot' && $_GET['order']!='unresponsive'))echo 'active';?>">
+        <li class="pull-right <?php if((isset($_GET['order']) && $_GET['order']!='hot' && $_GET['order']!='unresponsive'))echo 'active';?>">
         	<a href="?order=new">最新</a>
+        </li>
+        <li class="pull-right <?php if(!isset($_GET['order']))echo 'active';?>">
+            <a href="/">首页</a>
         </li>
     </ul>
     <div class="ask_content">
