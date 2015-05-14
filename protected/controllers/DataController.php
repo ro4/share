@@ -70,7 +70,7 @@ class DataController extends Controller {
 		//	));
 		//}else if($question_model['lock']){
 		//var_dump($comment_models);exit;
-		if($data_model['state']){
+		if(!$data_model['state']){
 			//问题已经被锁定
 			$this->render('index_lock',array(
 					'data_model'=>$data_model,
