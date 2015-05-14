@@ -87,6 +87,8 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
                     </a>
                     <?php echo $user['username']?>
                     <br/>
+                    <?php echo $this->getDataCount($uid['uid']) ?>
+                    <br/>
             </div>
             <?php $datas = $this->getDataByUid($uid['uid']);?>
             <?php foreach($datas as $data):?>
@@ -96,6 +98,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
             <?php endforeach;?>
     <?php endif;?>
 </div>
+
 <!-- =====================左侧内容区 end|| 右侧内容区start-->
 <div class="span3" id="sidebar">
 	<div class="text-center">

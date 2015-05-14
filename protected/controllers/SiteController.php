@@ -191,4 +191,11 @@ class SiteController extends Controller{
 		return $model;
 	}
 
+	/**
+	 * 获取分享数目
+	 */
+	public function getDataCount($uid){
+		return Data::model()->count('published_uid=:uid and state=:state',array(':uid'=>$uid,':state'=>1));
+	}
+
 }
