@@ -47,6 +47,7 @@ class PublishController extends BaseController
 	       $data=new Data();
 	       $data->data_title=htmlspecialchars($_POST['PublishForm']['title']);
 	       $data->data_detail=htmlspecialchars($_POST['PublishForm']['detail']);
+	       $data->state = htmlspecialchars($_POST['PublishForm']['state']);
 	       $data->add_time=time();
 	       $data->update_time=time();
 	       $data->published_uid=Yii::app()->user->id;

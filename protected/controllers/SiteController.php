@@ -61,7 +61,6 @@ class SiteController extends Controller{
 				'limit'=>'25',
 			));
 		$this->pageTitle="首页";
-		var_dump($models);exit;
 		$this->render('index',array(
 			'models'=>$models,
 			'pages'=>$pages,	
@@ -182,6 +181,14 @@ class SiteController extends Controller{
 		$criteria->params=array($uid,1);
 		$models=Data::model()->findAll($criteria);
 		return $models;
+	}
+
+	/**
+	 * 通过uid得到用户资料
+	 */
+	public function getUserInfoByUid($uid ){
+		$model = Users::model()->findByPk($uid);
+		return $model;
 	}
 
 }

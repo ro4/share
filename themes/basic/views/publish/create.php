@@ -27,6 +27,10 @@
 			<h6 class="text-info">上传资料:</h6>
 				<?php echo $form->fileField($model,'data',array('class'=>'span8'));?>
 			</div>
+			<div id='state'>
+			<h6 class="text-info">是否公开:</h6>
+				<?php echo $form->dropDownList($model,'state',Data::model()->getStateOptions(),array('prompt'=>'请选择'));?>
+			</div>
 			<div id="content">
 				<h6 class="text-info">资料详情(选填):</h6>
 				<?php echo $form->textArea($model,'detail',array('class'=>'span8 input_area'));?>

@@ -122,4 +122,12 @@ class Data extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function getStateOptions()
+    {
+        return array(
+            0 => '否',
+            1 => '是',
+        );
+    }
 }

@@ -18,6 +18,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
             <a href="/">首页</a>
         </li>
     </ul>
+    <?php if(isset($_GET['order'])):?>
     <div class="ask_content">
     	<ul>
     		<?php 
@@ -58,16 +59,14 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
                     </div >
                 </div>
                 <!--  -->
-                <div class="ask_user pull-right">
+                <div>
                 	<a href="<?php echo $this->createUrl('user/index',array('uid'=>$model['uid']));?>">
                     	<img class="img-rounded" src="<?php echo $model['avatar_file'];?>" width="50px">
                     </a>
                 </div>
                 <div class="clearfix"></div>
             </li>
-            <?php 
-            	endforeach;
-            ?>
+            <?php endforeach;?>
         </ul>
     </div>
     <div class="pages pull-right">
@@ -79,6 +78,23 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
 			));
   		 ?>
     </div>
+    <?php else:?>
+        <?php foreach ($models as $uid): ?>
+            <?php $user = $this->getUserInfoByUid($uid['uid'])?>
+            <div>
+                    <a href="<?php echo $this->createUrl('user/index',array('uid'=>$user['uid']));?>">
+                        <img class="img-rounded" src="<?php echo $user['avatar_file'];?>" width="50px">
+                    </a>
+                    <?php echo $user['username']?>
+                    <br/>
+            </div>
+            <?php $datas = $this->getDataByUid($uid['uid']);?>
+            <?php foreach($datas as $data):?>
+                <a href="<?php echo $this->createUrl('data/index',array('id'=>$data['id']));?>"><?php echo $data['data_title']?></a>
+                <br/>
+            <?php endforeach;?>
+            <?php endforeach;?>
+    <?php endif;?>
 </div>
 <!-- =====================左侧内容区 end|| 右侧内容区start-->
 <div class="span3" id="sidebar">
