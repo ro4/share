@@ -23,7 +23,7 @@
 		</div>	
 		<div class="clearfix"></div>
 		资料：<div class="topics">
-					<a href='<?php echo $this->createUrl($data_model['data_url']);?>' class="label label-info"><?php echo $data_model['data_url']?></a>
+					<a href='<?php echo $this->createUrl('data/download',array('id'=>$data_model['id']));?>' class="label label-info">下载</a>
 			</div>
 	</div>
 	<!-- 回复 -->

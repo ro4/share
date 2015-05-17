@@ -10,11 +10,11 @@ class DataController extends Controller {
 	public function actionIndex($id){
 		//检查是否存在此问题
 		if(!Data::model()->exists('id=:id',array(':id'=>$id))){
-			$this->error('此问题不存在',Yii::app()->homeUrl);
+			$this->error('此资料不存在',Yii::app()->homeUrl);
 		}
 		
 		if(!Yii::app()->user->isGuest){
-			//此问题的浏览人次加1
+			//此资料的浏览人次加1
 			$this->incViewCount($id);		
 		}
 		//获取问题相关信息
@@ -43,33 +43,7 @@ class DataController extends Controller {
 				from `{{comment}}`
 				left join `{{users}}` on (`{{comment}}`.`uid` = `{{users}}`.`uid`) where  `{{comment}}`.`data_id`=:id ";
 		$comment_models=$connection->createCommand($sql)->queryAll(true,array(':id'=>$id));
-		//var_dump($answer_models);
-		//exit();
-		//var_dump($answer_models);
-		//exit();
-		
 
-
-		//if($question_model['best_answer']){
-		//	//将数组进行排序，将最佳的一个答案放在第一位
-		//	foreach($answer_models as $k=>$answer_model){
-		//		if($answer_model['id']==$question_model['best_answer']){
-		//			array_push($answer_models,$answer_model);
-		//			unset($answer_models[$k]);
-		//			$answer_models=array_reverse($answer_models);
-		//			break;
-		//		}
-		//		
-		//	}
-		//	
-		//	
-		//	$this->render('index_ok',array(
-		//			'question_model'=>$question_model,
-		//			'answer_models'=>$answer_models,
-		//			'question_comment_models'=>$question_comment_models,
-		//	));
-		//}else if($question_model['lock']){
-		//var_dump($comment_models);exit;
 		if(!$data_model['state']){
 			//问题已经被锁定
 			$this->render('index_lock',array(
@@ -84,6 +58,29 @@ class DataController extends Controller {
 			));
 		}
 		
+	}
+
+	/**
+	 * 文件下载
+	 */
+	public function actionDownload($id){
+		//检查是否存在此资料
+		if(!Data::model()->exists('id=:id',array(':id'=>$id))){
+			$this->error('此资料不存在',Yii::app()->homeUrl);
+		}
+		
+		if(!Yii::app()->user->isGuest){
+			//此资料的浏览人次加1
+			$this->incDownCount($id);		
+		}
+
+		$data = Data::model()->findByPk($id);
+		$url = $data['data_url'];
+		$content = file_get_contents($url);
+		Yii::app()->request->sendFile('腾达.pdf',$content);
+
+
+
 	}
 	
 	/**
@@ -118,6 +115,18 @@ class DataController extends Controller {
 			//throw new ErrorException('评论失败');
 		}
 	}
+
+	/**
+	 * 下载人数+1
+	 * @param int $id
+	 * 只有登入用户才+1
+	 */
+	private function incDownCount($id){
+		if(!Data::model()->updateByPk($id, array('download_count'=>new CDbExpression('download_count+1')))){
+			//throw new ErrorException('评论失败');
+		}
+	}
+
 	/**
 	 * focus人数+1
 	 * @param int $id
