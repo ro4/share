@@ -5,10 +5,9 @@
 class UserController extends BaseController {
 	public function actionIndex($uid){
 		//自己才能看自己的个人中心
-		if($uid!=Yii::app()->user->id){
-			$this->redirect('/');
-		}
-
+		//if($uid!=Yii::app()->user->id){
+		//	$this->redirect('/');
+		//}
 		//显示用户资料
 		$user_model=Users::model()->findByPk($uid);
 		$checkModel = UserCheck::model()->findByAttributes(array('uid' => $uid ));

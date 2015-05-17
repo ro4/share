@@ -31,7 +31,7 @@
 					<?php if(!$user_model->authority && !$check_model){?>
 					<a href="/user/check" class="btn btn-success">申请审核</a>
 					<?php } else if($user_model->authority) {?>
-					<a href="/publish/index" class="btn btn-success">发布资料</a>
+					<a href="/publish" class="btn btn-success">发布资料</a>
 					<?php } else if($check_model) {?>
 					<a class="btn btn-success" disabled="disabled">审核中，请等待..</a>
 					<?php }?>

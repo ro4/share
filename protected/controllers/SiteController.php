@@ -31,7 +31,7 @@ class SiteController extends Controller{
 				break;
 			//默认根据时间排序
 			default:
-				$sql = "select `{{home_user}}`.`uid` from `{{home_user}}`";
+				$sql = "select `{{home_user}}`.`uid` from `{{home_user}}` order by `{{home_user}}`.`sort`";
 				//$sql="select `{{data}}`.`id` as `data_id`,`{{data}}`.`data_title`,`{{data}}`.`add_time`,`{{data}}`.`comment_count`,`{{data}}`.`download_count`,`{{data}}`.`view_count`,`{{data}}`.`comment_state`
 				//,`{{users}}`.`avatar_file`,`{{users}}`.`uid`
 				//from `{{data}}`

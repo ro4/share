@@ -37,10 +37,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
                     	<a href="<?php echo $this->createUrl('data/index',array('id'=>$model['data_id']));?>">
                         	<?php echo $model['data_title'];?> 
                         </a>
-                        &nbsp;
-                        <?php if(!$model['comment_state']): ?>
-                            <span style="font-style:normal;" title="该资料禁止评论?" class="text-error">[该资料禁止评论]</span>
-                        <?php  endif; ?>
                      </h5>
                     <div id="ask_info">
                         <p class="span4 pull-left" style="margin-left:0">
@@ -79,24 +75,40 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
   		 ?>
     </div>
     <?php else:?>
-        <?php foreach ($models as $uid): ?>
-            <?php $user = $this->getUserInfoByUid($uid['uid'])?>
-            <div>
+
+     <div class="ask_content">
+        <ul>
+        <?php foreach ($models as $uid):?>
+        <?php $datas = $this->getDataByUid($uid['uid']);?>
+        <?php $user = $this->getUserInfoByUid($uid['uid'])?>
+            <li>
+                <!-- 回复次数 -->
+                <div class="replay_count pull-right text-center active">
+                    <span><?php echo $this->getDataCount($uid['uid']);?></span>
+                    <p>分享</p>
+                </div>
+                <div class="ask_main pull-right span7">
+                 <?php foreach($datas as $data):?>
+                    <h5 id="ask_title">
+                        <a href="<?php echo $this->createUrl('data/index',array('id'=>$data['id']));?>">
+                            <?php echo $data['data_title'];?> 
+                            (<?php  echo $data['view_count'];?>次查看)
+                        </a>
+                     </h5>
+                <?php endforeach;?>
+                </div>
+                <div>
                     <a href="<?php echo $this->createUrl('user/index',array('uid'=>$user['uid']));?>">
                         <img class="img-rounded" src="<?php echo $user['avatar_file'];?>" width="50px">
                     </a>
-                    <?php echo $user['username']?>
-                    <br/>
-                    <?php echo $this->getDataCount($uid['uid']) ?>
-                    <br/>
-            </div>
-            <?php $datas = $this->getDataByUid($uid['uid']);?>
-            <?php foreach($datas as $data):?>
-                <a href="<?php echo $this->createUrl('data/index',array('id'=>$data['id']));?>"><?php echo $data['data_title']?></a>
-                <br/>
-            <?php endforeach;?>
-            <?php endforeach;?>
+                </div>
+                <div class="clearfix"></div>
+            </li>
+        <?php endforeach;?>
+        </ul>
+    </div>
     <?php endif;?>
+
 </div>
 
 <!-- =====================左侧内容区 end|| 右侧内容区start-->
