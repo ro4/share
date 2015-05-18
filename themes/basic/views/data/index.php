@@ -22,8 +22,8 @@
 			<?php echo date('m-d H:i:s',$data_model['add_time'])?>
 		</div>	
 		<div class="clearfix"></div>
-		资料：<div class="topics">
-					<a href='<?php echo $this->createUrl('data/download',array('id'=>$data_model['id']));?>' class="label label-info">下载</a>
+		资料：<?php echo basename($data_model['data_url'])?>(<?php echo filesize($data_model['data_url'])/1024?>kb)<div class="pull-right answer-submit">
+					<a href='<?php echo $this->createUrl('data/download',array('id'=>$data_model['id']));?>' class="btn btn-info span2">下载</a>
 			</div>
 	</div>
 	<!-- 回复 -->
@@ -55,6 +55,13 @@
 			<?php if(Yii::app()->user->isGuest):?>
 			<!-- 未登入用户 -->
 			<p class="text-center">要回复问题请先<a href="#loginModal" data-toggle="modal">登入</a>或<a href="<?php echo $this->createUrl('site/register')?>">注册</a></p>
+			<?php elseif(!$data_model['comment_state']):?>
+				<div class="answer_input">
+			<!-- 未登入用户 -->
+			<p class="text-center">
+				该资料已锁定，无法继续回复！		
+			</p>
+			</div>
 			<?php else:?>
 			<!-- answer form start -->
 			<?php $form=$this->beginWidget('CActiveForm', array(

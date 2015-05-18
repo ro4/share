@@ -68,14 +68,6 @@ class UserController extends BaseController {
     		$this->render('check');
     	}
     }
-
-    public function actionTest(){
-    	$content = file_get_contents('public/upload/data/腾达.pdf');
-    	//$content = fopen('/public/upload/data/腾达.pdf','r');
-    	//var_dump($content);exit;
-    	Yii::app()->request->sendFile('腾达.pdf',$content);
-    	fclose($content);
-    }
 	/**
 	 * 获取自己发布的问题
 	 * return model pages

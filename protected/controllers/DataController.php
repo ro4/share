@@ -19,7 +19,7 @@ class DataController extends Controller {
 		}
 		//获取问题相关信息
 		$connection=Yii::app()->db;
-		$sql="select `{{data}}`.`id`,`{{data}}`.`data_title`,`{{data}}`.`data_detail`,`{{data}}`.`add_time`,`{{data}}`.`update_time`,`{{data}}`.`view_count`,`{{data}}`.`download_count`
+		$sql="select `{{data}}`.`id`,`{{data}}`.`comment_state`,`{{data}}`.`data_title`,`{{data}}`.`data_detail`,`{{data}}`.`add_time`,`{{data}}`.`update_time`,`{{data}}`.`view_count`,`{{data}}`.`download_count`
 				,`{{data}}`.`focus_count`,`{{data}}`.`comment_count`,`{{data}}`.`data_url`,`{{data}}`.`state`,`{{users}}`.`uid`,`{{users}}`.`username`,`{{users}}`.`avatar_file`
 				from `{{data}}`
 				left join `{{users}}` on (`{{data}}`.`published_uid` = `{{users}}`.`uid`) where  `{{data}}`.`id`=:id ";
@@ -70,17 +70,16 @@ class DataController extends Controller {
 		}
 		
 		if(!Yii::app()->user->isGuest){
-			//此资料的浏览人次加1
+			//此资料的下载人次加1
 			$this->incDownCount($id);		
 		}
 
 		$data = Data::model()->findByPk($id);
 		$url = $data['data_url'];
-		$content = file_get_contents($url);
-		Yii::app()->request->sendFile('腾达.pdf',$content);
-
-
-
+		$file = fopen($url,"r");
+		$contents = fread($file, filesize($url));
+		fclose($file);
+		Yii::app()->request->sendFile(basename($url),$contents);
 	}
 	
 	/**
