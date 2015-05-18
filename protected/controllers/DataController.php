@@ -72,6 +72,8 @@ class DataController extends Controller {
 		if(!Yii::app()->user->isGuest){
 			//此资料的下载人次加1
 			$this->incDownCount($id);		
+		} else {
+			$this->error("登录后才能下载");
 		}
 
 		$data = Data::model()->findByPk($id);

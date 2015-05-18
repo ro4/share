@@ -11,7 +11,7 @@
 				<ul style="list-style-type:square">
 				<?php foreach($comment_models as $commetnt_model): ?>
 				<li>
-					<a href="<?php echo $this->createUrl('question/index',array('id'=>$commetnt_model['id'])); ?>" target="_blank">
+					<a href="<?php echo $this->createUrl('data/index',array('id'=>$commetnt_model['id'])); ?>" target="_blank">
 						<?php echo $commetnt_model['data_title'] ?> 
 					</a>
 					<br/>
