@@ -1,8 +1,8 @@
 		<div class="user_bottom span11">
 			<ul class="nav nav-tabs">
-				<li><a href="<?php echo $this->createUrl('user/index',array('uid'=>$_GET['uid'],'type'=>'self')) ?>">提问</a></li>
+				<li><a href="<?php echo $this->createUrl('user/index',array('uid'=>$_GET['uid'],'type'=>'self')) ?>">分享</a></li>
 			    <li><a href="<?php echo $this->createUrl('user/index',array('uid'=>$_GET['uid'],'type'=>'focus')); ?>">关注</a></li>
-			    <li class="active"><a href="<?php echo $this->createUrl('user/index',array('uid'=>$_GET['uid'],'type'=>'answer')) ; ?>">回答(<?php echo $count ?>)</a></li>
+			    <li class="active"><a href="<?php echo $this->createUrl('user/index',array('uid'=>$_GET['uid'],'type'=>'comment')) ; ?>">评论(<?php echo $count ?>)</a></li>
 			</ul>
 			<div class="tab-content">
 
@@ -20,7 +20,7 @@
 							<?php echo $commetnt_model['download_count'] ?> 
 						&nbsp;&nbsp;&nbsp;浏览数:
 							<?php echo $commetnt_model['view_count'] ?> 
-						&nbsp;&nbsp;&nbsp;提问时间:	
+						&nbsp;&nbsp;&nbsp;时间:	
 						<?php echo date('Y-m-d',$commetnt_model['add_time']); ?> 
 					</div>
 				</li>
