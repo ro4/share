@@ -14,8 +14,6 @@ class CommentController extends Controller {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-		//var_dump($_POST['AnswerForm']);
-		//启用事物处理 因为需要插入 Answer表及Question字段中的answer_count 字段
 		$transaction=Yii::app()->db->beginTransaction();
 		try {
 			$comment_model=new Comment();
@@ -28,7 +26,6 @@ class CommentController extends Controller {
 				throw new ErrorException('评论失败1');
 			}
 				
-			//更改question表中的answer_count 信息
 			if(!Data::model()->updateByPk($comment_model->data_id, array('comment_count'=>new CDbExpression('comment_count+1')))){
 				throw new ErrorException('评论失败2');
 			}
@@ -41,7 +38,6 @@ class CommentController extends Controller {
 			//exit($e->getMessage());
 			$this->error($e->getMessage());
 		}
-	
 	}
 }
 
