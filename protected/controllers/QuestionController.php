@@ -38,7 +38,7 @@ class QuestionController extends Controller {
 		$question_comment_models=$this->getQuestionComment($id);
 		
 		//获取答案相关信息
-		$sql="select `{{answer}}`.`id`,`{{answer}}`.`answer_content`,`{{answer}}`.`add_time`,`{{answer}}`.`against_count`,`{{answer}}`.`agree_count`,`{{answer}}`.`comment_count`
+		$sql="select `{{answer}}`.`id`,`{{answer}}`.`answer_content`,`{{answer}}`.`add_time`,`{{answer}}`.`comment_count`
 				,`{{answer}}`.`ip`,`{{users}}`.`uid`,`{{users}}`.`username`,`{{users}}`.`avatar_file`
 				from `{{answer}}`
 				left join `{{users}}` on (`{{answer}}`.`uid` = `{{users}}`.`uid`) where  `{{answer}}`.`question_id`=:id ";

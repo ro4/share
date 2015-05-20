@@ -38,7 +38,7 @@ class DataController extends Controller {
 		//$data_comment_models=$this->getDataComment($id);
 		
 		//获取评论相关信息
-		$sql="select `{{comment}}`.`id`,`{{comment}}`.`content`,`{{comment}}`.`add_time`,`{{comment}}`.`against_count`,`{{comment}}`.`agree_count`,`{{comment}}`.`comment_count`
+		$sql="select `{{comment}}`.`id`,`{{comment}}`.`content`,`{{comment}}`.`add_time`
 				,`{{comment}}`.`ip`,`{{users}}`.`uid`,`{{users}}`.`username`,`{{users}}`.`avatar_file`
 				from `{{comment}}`
 				left join `{{users}}` on (`{{comment}}`.`uid` = `{{users}}`.`uid`) where  `{{comment}}`.`data_id`=:id ";

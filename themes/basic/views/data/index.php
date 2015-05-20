@@ -22,9 +22,13 @@
 			<?php echo date('m-d H:i:s',$data_model['add_time'])?>
 		</div>	
 		<div class="clearfix"></div>
+		<?php if(file_exists($data_model['data_url'])):?>
 		资料：<?php echo basename($data_model['data_url'])?>(<?php echo filesize($data_model['data_url'])/1024?>kb)<div class="pull-right answer-submit">
 					<a href='<?php echo $this->createUrl('data/download',array('id'=>$data_model['id']));?>' class="btn btn-info span2">下载</a>
 			</div>
+			<?php else:?>
+			资料已经被删除！
+		<?php endif;?>
 	</div>
 	<!-- 回复 -->
 	<div class="answer">

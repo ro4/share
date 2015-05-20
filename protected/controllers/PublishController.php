@@ -39,7 +39,7 @@ class PublishController extends BaseController
        	$dir = 'public/upload/data';
        	$fileName = $dir.'/'.$file->getName();
        	if(!$file->saveAs($fileName)){
-				$this->error('头像上传失败');
+				$this->error('上传失败');
 		}
         //使用事物处理插入
        $transaction=Yii::app()->db->beginTransaction();
