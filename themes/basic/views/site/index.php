@@ -5,9 +5,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl .'/js/ta
 <!-- =====================左侧内容区 start-->
 <div class="span9" id="ask_list">
 	<ul class="nav nav-tabs">
-    	<li class="pull-left">
-        	<b style="line-height: 35px;"><i class="icon-question-sign"></i>全部资料</b>
-        </li>
         <li class="pull-right <?php if(isset($_GET['order']) && $_GET['order']=='hot')echo 'active';?>">
         	<a href="?order=hot">热门</a>
         </li>

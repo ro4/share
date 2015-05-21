@@ -3627,3 +3627,14 @@ Stack trace:
 REQUEST_URI=/backend.php?r=home/update&uid=1
 HTTP_REFERER=http://s.me/backend.php?r=home/user
 ---
+2015/05/21 14:30:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "update" 动作.' in D:\code\share\framework\web\CController.php:483
+Stack trace:
+#0 D:\code\share\framework\web\CController.php(270): CController->missingAction('update')
+#1 D:\code\share\framework\web\CWebApplication.php(282): CController->run('update')
+#2 D:\code\share\framework\web\CWebApplication.php(141): CWebApplication->runController('home/update')
+#3 D:\code\share\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\code\share\backend.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/backend.php?r=home/update&id=3
+HTTP_REFERER=http://s.me/backend.php?r=home/user
+---

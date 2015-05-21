@@ -12,6 +12,7 @@
 				<li>
 					昵称:<?php echo $user_model->username; ?>					
 				</li>	
+				<?php if($user_model->uid==Yii::app()->user->id):?>
 				<li>
 					邮箱:<?php echo $user_model->email; ?>
 				</li>
@@ -35,7 +36,8 @@
 					<?php } else if($check_model) {?>
 					<a class="btn btn-success" disabled="disabled">审核中，请等待..</a>
 					<?php }?>
-				</li>			
+				</li>	
+				<?php endif;?>		
 			</ul>
 			
 		</div>
