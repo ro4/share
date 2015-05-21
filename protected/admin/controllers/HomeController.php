@@ -57,6 +57,14 @@ class HomeController extends BaseController {
 			$this->error(var_dump($user->errors));
 		}
 	}
+
+	public function actionDelete($id){
+		if(HomeUser::model()->deleteByPk($id)){
+			$this->success("删除成功");
+		} else {
+			$this->error("删除失败");
+		}
+	}
 	/**
 	 * 获取分享数目
 	 */

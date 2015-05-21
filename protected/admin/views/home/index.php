@@ -43,9 +43,9 @@
 					<?php echo $model['sort'] ?>
 				</td>
 				<td>
-					<a href="<?php echo $this->createUrl('update',array('uid'=>$model['uid'])) ?>">编辑</a> 
+					<a href="<?php echo $this->createUrl('update',array('id'=>$model['id'])) ?>">编辑</a> 
 						&nbsp;/&nbsp;
-					<a class="text-error" onclick="return confirm('您确认要删除吗? 删除之后将无法恢复！');" href="<?php echo $this->createUrl('delete',array('uid'=>$model['uid'])) ?>">删除</a>
+					<a class="text-error" onclick="return confirm('您确认要删除吗? 删除之后将无法恢复！');" href="<?php echo $this->createUrl('delete',array('id'=>$model['id'])) ?>">删除</a>
 				</td>			
 			</tr>
 		<?php endforeach; ?>
