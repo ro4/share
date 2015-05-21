@@ -44,11 +44,10 @@ class Comment extends CActiveRecord
 		return array(
 			array('data_id, content,uid,add_time,ip', 'required'),
 			array('data_id', 'length', 'max'=>11),
-			array('add_time, against_count, agree_count, uid, comment_count', 'length', 'max'=>10),
-			array('ip', 'length', 'max'=>15),
+			array('add_time,uid', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, data_id, content, add_time, against_count, agree_count, uid, comment_count, ip', 'safe', 'on'=>'search'),
+			array('id, data_id, content, add_time, uid, ip', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,10 +72,7 @@ class Comment extends CActiveRecord
 			'data_id' => 'Data',
 			'content' => 'Content',
 			'add_time' => 'Add Time',
-			'against_count' => 'Against Count',
-			'agree_count' => 'Agree Count',
 			'uid' => 'Uid',
-			'comment_count' => 'Comment Count',
 			'ip' => 'Ip',
 		);
 	}
@@ -96,10 +92,7 @@ class Comment extends CActiveRecord
 		$criteria->compare('data_id',$this->data_id,true);
 		$criteria->compare('content',$this->content,true);
 		$criteria->compare('add_time',$this->add_time,true);
-		$criteria->compare('against_count',$this->against_count,true);
-		$criteria->compare('agree_count',$this->agree_count,true);
 		$criteria->compare('uid',$this->uid,true);
-		$criteria->compare('comment_count',$this->comment_count,true);
 		$criteria->compare('ip',$this->ip,true);
 
 		return new CActiveDataProvider($this, array(

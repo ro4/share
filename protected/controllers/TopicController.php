@@ -28,6 +28,26 @@ class TopicController extends Controller {
 			'pages'=>$pages,
 		));
 	}
+
+	public function actionShowAll(){
+		$sql="select `{{topic}}`.`id`,`{{topic}}`.`topic_title`,`{{topic}}`.`discuss_count` from `{{topic}}` where `{{topic}}`.`discuss_count` != 0 order by `{{topic}}`.`discuss_count` desc";
+		$topic_models=Yii::app()->db->createCommand($sql)->queryAll();
+		$connection=Yii::app()->db;
+		$criteria = new CDbCriteria;
+		$count=count($topic_models);
+		$pages = new CPagination($count);
+		$pages->pageSize = 20;
+		$pages->applylimit($criteria);
+		$topic_models=$connection->createCommand($sql." LIMIT :offset,:limit");
+		$topic_models->bindValue(':offset', $pages->currentPage*$pages->pageSize);
+		$topic_models->bindValue(':limit', $pages->pageSize);
+		$topic_models=$topic_models->queryAll();
+		$this->render('all',array(
+			'count'=>$count,
+			'topic_models'=>$topic_models,
+			'pages'=>$pages,
+		));
+	}
 }
 
 ?>

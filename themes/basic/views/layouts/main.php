@@ -44,6 +44,7 @@
 							),
 							'items'=>array(
 								array('label'=>'资料', 'url'=>array('/site/index')),
+								array('label'=>'分类', 'url'=>array('/topic/showall')),
 							),
 						)); ?>
                         <!--  用户名头像下拉 -->
