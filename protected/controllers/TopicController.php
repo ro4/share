@@ -42,6 +42,7 @@ class TopicController extends Controller {
 		$topic_models->bindValue(':offset', $pages->currentPage*$pages->pageSize);
 		$topic_models->bindValue(':limit', $pages->pageSize);
 		$topic_models=$topic_models->queryAll();
+
 		$this->render('all',array(
 			'count'=>$count,
 			'topic_models'=>$topic_models,

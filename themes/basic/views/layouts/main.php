@@ -92,7 +92,7 @@
          <!--===============footer start-->
         <div class="footer">
         	<div class="container">
-                <p class="text-left">
+                <p class="text-center">
                    <i class="icon-adjust"></i> CODE BY FAN<br/>
                    <small>POWERED BY YII</small>
                 </p>
