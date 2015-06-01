@@ -81,7 +81,7 @@ class DataController extends Controller {
 		$file = fopen($url,"r");
 		$contents = fread($file, filesize($url));
 		fclose($file);
-		Yii::app()->request->sendFile(basename($url),$contents);
+		Yii::app()->request->sendFile($this->get_basename($url),$contents);
 	}
 	
 	/**
@@ -205,6 +205,11 @@ class DataController extends Controller {
 		
 		echo json_encode($data);
 	}	
+
+	public function get_basename($filename){  
+     return preg_replace('/^.+[\\\\\\/]/', '', $filename);  
+ } 
+
 }
 
 ?>

@@ -37,7 +37,13 @@ class PublishController extends BaseController
        	   	$extensionName=$file->getExtensionName();
        	}
        	$dir = 'public/upload/data';
-       	$fileName = $dir.'/'.$file->getName();
+       	$code = mb_detect_encoding($file->getName());
+       	if($code == "GBK"){
+       		$name = iconv("GBK","UTF-8",$file->getName()); 
+       	} else {
+       		$name = $file->getName();
+       	}
+       	$fileName = $dir.'/'.$name;
        	if(!$file->saveAs($fileName)){
 				$this->error('上传失败');
 		}
