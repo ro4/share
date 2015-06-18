@@ -14,6 +14,11 @@
 					<a href="<?php echo $this->createUrl('data/index',array('id'=>$model['id'])) ?>" target="_blank">
 						<?php echo $model['data_title'] ?> 
 					</a>
+					<?php if($_GET['uid']==Yii::app()->user->id):?>
+					<div class="pull-right answer-submit">
+					<a href='<?php echo $this->createUrl('data/delete',array('id'=>$model['id']));?>' class="btn btn-info span2">删除</a>
+					</div>
+				<?php endif;?>
 					<br/>
 					<div class="muted info">
 						&nbsp;&nbsp;&nbsp;浏览数:
